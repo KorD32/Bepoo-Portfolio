@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Bepoo • 3D Models • VFX • Level Design</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;500&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="grid-bg"></div>
+
+    <nav>
+        <a href="#" class="logo">Bepoo</a>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#works">Works</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-wrapper">
+            <div class="hero-content">
+                <h1>
+                    <span class="highlight">3D Artist</span>
+                    <span style="display: flex; justify-content: center; width: 5em; color: #fff;">&nbsp;&amp;&nbsp;</span>
+                    <span class="highlight">Animator</span>
+                </h1>
+                <p class="hero-description">
+                    Creating immersive Minecraft experiences through detailed 3D models, 
+                    stunning particle effects, and epic level designs. 
+                    Bringing your blocky visions to life.
+                </p>
+                <div class="hero-tags">
+                    <span class="tag">Blockbench</span>
+                    <span class="tag">Aseprite</span>
+                    <span class="tag">Snowstorm</span>
+                    <span class="tag">VFX</span>
+                    <span class="tag">Animations</span>
+                    <span class="tag">Minecraft Builds</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         WORKS SECTION WRAPPER
+         Contains: 3D Models, Level Design, VFX
+    ============================================ -->
+    <div id="works">
+
+    <!-- ============================================
+         3D MODELS SECTION
+         
+         HOW TO ADD NEW WORKS:
+         
+         For IMAGES (.png/.gif): Copy and paste this template:
+         
+            <div class="portfolio-item fade-in" onclick="openLightbox(this)">
+                <span class="category-badge">MODEL TYPE</span>
+                <img src="YOUR_IMAGE_PATH.png" alt="Project Name">
+                <div class="overlay"></div>
+                <div class="info">
+                    <h3>PROJECT NAME</h3>
+                    <p>Brief description here</p>
+                </div>
+            </div>
+         
+         For FEATURED (larger) items: Add class="portfolio-item featured fade-in"
+         
+    ============================================ -->
+    
+    <section id="models">
+        <div class="section-header">
+            <h2 class="section-title">3D <span class="accent">MODELS</span></h2>
+            <span class="section-number">01</span>
+        </div>
+        
+        <div class="portfolio-grid">
+            
+            <!-- FEATURED MODEL -->
+            <div class="portfolio-item featured fade-in" onclick="openLightbox(this)">
+                <span class="category-badge">ENTITY</span>
+                <!-- Replace src with your image path (.png or .gif) -->
+                <img src="https://placehold.co/1200x600/1a1a1a/5dba3c?text=FEATURED+ENTITY+MODEL" alt="Featured Entity Model">
+                <div class="overlay"></div>
+                <div class="info">
+                    <h3>CUSTOM ENTITY MODEL</h3>
+                    <p>Blockbench • Animated</p>
+                </div>
+            </div>
+
+            <!-- MODEL EXAMPLES -->
+            <div class="portfolio-item fade-in" onclick="openLightbox(this)">
+                <span class="category-badge">ARMOR</span>
+                <img src="https://placehold.co/800x500/1a1a1a/5dba3c?text=ARMOR+MODEL" alt="Custom Armor">
+                <div class="overlay"></div>
+                <div class="info">
+                    <h3>CUSTOM ARMOR SET</h3>
+                    <p>Blockbench • Resource Pack</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item fade-in" onclick="openLightbox(this)">
+                <span class="category-badge">WEAPON</span>
+                <img src="https://placehold.co/800x500/1a1a1a/5dba3c?text=WEAPON+MODEL" alt="Custom Weapon">
+                <div class="overlay"></div>
+                <div class="info">
+                    <h3>3D WEAPON MODEL</h3>
+                    <p>Blockbench • Animated</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item fade-in" onclick="openLightbox(this)">
+                <span class="category-badge">MOB</span>
+                <img src="https://placehold.co/800x500/1a1a1a/5dba3c?text=CUSTOM+MOB" alt="Custom Mob">
+                <div class="overlay"></div>
+                <div class="info">
+                    <h3>CUSTOM MOB MODEL</h3>
+                    <p>Blockbench • Entity</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item fade-in" onclick="openLightbox(this)">
+                <span class="category-badge">ITEM</span>
+                <img src="https://placehold.co/800x500/1a1a1a/5dba3c?text=3D+ITEM" alt="3D Item">
+                <div class="overlay"></div>
+                <div class="info">
+                    <h3>3D ITEM MODEL</h3>
+                    <p>Blockbench • Handheld</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item fade-in" onclick="openLightbox(this)">
+                <span class="category-badge">BLOCK</span>
+                <img src="https://placehold.co/800x500/1a1a1a/5dba3c?text=CUSTOM+BLOCK" alt="Custom Block">
+                <div class="overlay"></div>
+                <div class="info">
+                    <h3>CUSTOM BLOCK MODEL</h3>
+                    <p>Blockbench • Connected Textures</p>
+                </div>
+            </div>
+
+            <!-- ADD MORE 3D MODEL ITEMS HERE -->
+
+        </div>
+    </section>
+
+    <!-- ============================================
+         LEVEL DESIGN SECTION
+         
+         For IMAGES (.png/.gif): Same template as above
+         
+    ============================================ -->
+
+    <section id="levels">
+        <div class="section-header">
+            <h2 class="section-title">LEVEL <span class="accent">DESIGN</span></h2>
+            <span class="section-number">02</span>
+        </div>
+        
+        <div class="portfolio-grid">
+            
+            <!-- FEATURED BUILD -->
+            <div class="portfolio-item featured fade-in" onclick="openLightbox(this)">
+                <span class="category-badge">SPAWN</span>
+                <img src="https://placehold.co/1200x600/1a1a1a/5dba3c?text=SPAWN+BUILD" alt="Spawn Build">
+                <div class="overlay"></div>
+                <div class="info">
+                    <h3>SERVER SPAWN</h3>
+                    <p>Minecraft Build • WorldEdit</p>
+                </div>
+            </div>
+
+            <!-- BUILD EXAMPLES -->
+            <div class="portfolio-item fade-in" onclick="openLightbox(this)">
+                <span class="category-badge">ARENA</span>
+                <img src="https://placehold.co/800x500/1a1a1a/5dba3c?text=PVP+ARENA" alt="PvP Arena">
+                <div class="overlay"></div>
+                <div class="info">
+                    <h3>PVP ARENA</h3>
+                    <p>Minecraft Build • Competitive</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item fade-in" onclick="openLightbox(this)">
+                <span class="category-badge">HUB</span>
+                <img src="https://placehold.co/800x500/1a1a1a/5dba3c?text=LOBBY+HUB" alt="Lobby Hub">
+                <div class="overlay"></div>
+                <div class="info">
+                    <h3>LOBBY HUB</h3>
+                    <p>Minecraft Build • Server</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item fade-in" onclick="openLightbox(this)">
+                <span class="category-badge">MAP</span>
+                <img src="https://placehold.co/800x500/1a1a1a/5dba3c?text=ADVENTURE+MAP" alt="Adventure Map">
+                <div class="overlay"></div>
+                <div class="info">
+                    <h3>ADVENTURE MAP</h3>
+                    <p>Minecraft Build • Story</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item fade-in" onclick="openLightbox(this)">
+                <span class="category-badge">TERRAIN</span>
+                <img src="https://placehold.co/800x500/1a1a1a/5dba3c?text=CUSTOM+TERRAIN" alt="Custom Terrain">
+                <div class="overlay"></div>
+                <div class="info">
+                    <h3>CUSTOM TERRAIN</h3>
+                    <p>WorldPainter • Landscape</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item fade-in" onclick="openLightbox(this)">
+                <span class="category-badge">DUNGEON</span>
+                <img src="https://placehold.co/800x500/1a1a1a/5dba3c?text=DUNGEON+BUILD" alt="Dungeon Build">
+                <div class="overlay"></div>
+                <div class="info">
+                    <h3>DUNGEON BUILD</h3>
+                    <p>Minecraft Build • RPG</p>
+                </div>
+            </div>
+
+            <!-- ADD MORE LEVEL DESIGN ITEMS HERE -->
+
+        </div>
+    </section>
+
+    <!-- ============================================
+         VFX SECTION - VIDEOS ONLY
+         
+         For VIDEOS: Use this template:
+         
+            <div class="portfolio-item fade-in" onclick="openLightbox(this)">
+                <span class="category-badge">VFX TYPE</span>
+                <video src="YOUR_VIDEO.mp4" poster="THUMBNAIL.png" muted loop playsinline></video>
+                <div class="play-icon"></div>
+                <div class="overlay"></div>
+                <div class="info">
+                    <h3>PROJECT NAME</h3>
+                    <p>Brief description here</p>
+                </div>
+            </div>
+         
+    ============================================ -->
+
+    <section id="vfx" class="vfx-section">
+        <div class="section-header">
+            <h2 class="section-title"><span class="accent">VFX</span> & PARTICLES</h2>
+            <span class="section-number">03</span>
+        </div>
+        
+        <div class="portfolio-grid">
+            
+            <!-- FEATURED VFX -->
+            <div class="portfolio-item featured fade-in" onclick="openLightbox(this)">
+                <span class="category-badge">PARTICLES</span>
+                <video src="" poster="https://placehold.co/1200x600/1a1a1a/5dba3c?text=PARTICLE+EFFECTS" muted loop playsinline></video>
+                <div class="play-icon"></div>
+                <div class="overlay"></div>
+                <div class="info">
+                    <h3>PARTICLE SYSTEM</h3>
+                    <p>Snowstorm • Bedrock</p>
+                </div>
+            </div>
+
+            <!-- VFX VIDEO EXAMPLES -->
+            <div class="portfolio-item fade-in" onclick="openLightbox(this)">
+                <span class="category-badge">SPELL</span>
+                <video src="" poster="https://placehold.co/800x500/1a1a1a/5dba3c?text=SPELL+VFX" muted loop playsinline></video>
+                <div class="play-icon"></div>
+                <div class="overlay"></div>
+                <div class="info">
+                    <h3>MAGIC SPELL VFX</h3>
+                    <p>Snowstorm • Animation</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item fade-in" onclick="openLightbox(this)">
+                <span class="category-badge">EXPLOSION</span>
+                <video src="" poster="https://placehold.co/800x500/1a1a1a/5dba3c?text=EXPLOSION+VFX" muted loop playsinline></video>
+                <div class="play-icon"></div>
+                <div class="overlay"></div>
+                <div class="info">
+                    <h3>EXPLOSION EFFECT</h3>
+                    <p>Particles • Combat</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item fade-in" onclick="openLightbox(this)">
+                <span class="category-badge">AURA</span>
+                <video src="" poster="https://placehold.co/800x500/1a1a1a/5dba3c?text=AURA+VFX" muted loop playsinline></video>
+                <div class="play-icon"></div>
+                <div class="overlay"></div>
+                <div class="info">
+                    <h3>CHARACTER AURA</h3>
+                    <p>Snowstorm • Looping</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item fade-in" onclick="openLightbox(this)">
+                <span class="category-badge">TRAIL</span>
+                <video src="" poster="https://placehold.co/800x500/1a1a1a/5dba3c?text=TRAIL+VFX" muted loop playsinline></video>
+                <div class="play-icon"></div>
+                <div class="overlay"></div>
+                <div class="info">
+                    <h3>WEAPON TRAIL</h3>
+                    <p>Particles • Movement</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item fade-in" onclick="openLightbox(this)">
+                <span class="category-badge">AMBIENT</span>
+                <video src="" poster="https://placehold.co/800x500/1a1a1a/5dba3c?text=AMBIENT+VFX" muted loop playsinline></video>
+                <div class="play-icon"></div>
+                <div class="overlay"></div>
+                <div class="info">
+                    <h3>AMBIENT PARTICLES</h3>
+                    <p>Snowstorm • Environment</p>
+                </div>
+            </div>
+
+            <!-- ADD MORE VFX VIDEO ITEMS HERE -->
+
+        </div>
+    </section>
+
+    </div><!-- End of Works wrapper -->
+
+    <section id="about">
+        <div class="section-header">
+            <h2 class="section-title">ABOUT <span class="accent">ME</span></h2>
+            <span class="section-number">04</span>
+        </div>
+        
+        <div class="about-content">
+            <div class="about-text">
+                <p>
+                    I'm a <strong> Artist</strong> specializing for Minecraft in custom 3D models, particle effects, 
+                    and immersive level designs. With expertise in Blockbench and Snowstorm, I create 
+                    detailed entities, items, and stunning VFX for Minecraft servers and Marketplace.
+                </p>
+                <p>
+                    From epic spawn builds to intricate mob models and eye-catching particle effects, 
+                    I bring creativity and technical skill to every project. Whether you need a 
+                    custom resource pack, animated models, or a complete server build, I'm here to 
+                    transform your blocky visions into reality.
+                </p>
+            </div>
+            <div class="skills-section">
+                <h3>TOOLS & SKILLS</h3>
+                <div class="skills-list">
+                    <span class="skill-item">Blockbench</span>
+                    <span class="skill-item">Aseprite</span>
+                    <span class="skill-item">Minecraft Buildings</span>
+                    <span class="skill-item">Snowstorm</span>
+                    <span class="skill-item">VFX</span>
+                    <span class="skill-item">Animations</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="section-header">
+            <h2 class="section-title">GET IN <span class="accent">TOUCH</span></h2>
+            <span class="section-number">05</span>
+        </div>
+        
+        <div class="contact-content">
+            <h3>LET'S <span class="accent">BUILD</span> TOGETHER</h3>
+            <p>
+                Available for freelance projects, collaborations, and full-time opportunities. Feel free to reach out! 
+            </p>
+            <div class="contact-links">
+                <!-- EDIT YOUR CONTACT LINKS HERE -->
+                <a href="mailto:vinwijaya327@gmail.com" class="contact-link">Email</a>
+                <a href="https://discord.com/users/bepoo_" target="_blank" class="contact-link">Discord</a>
+                <a href="https://x.com/bepounyu" target="_blank" class="contact-link">Twitter</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <span>© 2025 KorD. ALL RIGHTS RESERVED.</span>
+        <span class="minecraft-credit">◆ BUILT WITH BLOCKS ◆</span>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+        <button class="lightbox-close" onclick="closeLightbox(event)">×</button>
+        <div class="lightbox-content" id="lightbox-content"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
