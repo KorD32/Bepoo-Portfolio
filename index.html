@@ -49,7 +49,7 @@
 
     <!-- ============================================
          WORKS SECTION WRAPPER
-         Contains: 3D Models, Level Design, VFX
+         Contains: 3D Models, Level Design, VFX, Minecraft Skins
     ============================================ -->
     <div id="works">
 
@@ -333,19 +333,119 @@
         </div>
     </section>
 
+    <!-- ============================================
+         MINECRAFT SKINS SECTION
+         
+         For IMAGES (.png/.gif): Use the same template as 3D Models
+         
+            <div class="portfolio-item fade-in" onclick="openLightbox(this)">
+                <span class="category-badge">SKIN TYPE</span>
+                <img src="assets/skins/YOUR_SKIN.png" alt="Skin Name">
+                <div class="overlay"></div>
+                <div class="info">
+                    <h3>SKIN NAME</h3>
+                    <p>Description here</p>
+                </div>
+            </div>
+         
+    ============================================ -->
+
+    <section id="skins">
+        <div class="section-header">
+            <h2 class="section-title">MINECRAFT <span class="accent">SKINS</span></h2>
+            <span class="section-number">04</span>
+        </div>
+        
+        <div class="portfolio-grid">
+            
+            <!-- FEATURED SKIN -->
+            <div class="portfolio-item featured fade-in" onclick="openLightbox(this)">
+                <span class="category-badge">Collections</span>
+                <img src="assets/skins/random.png" alt="Collection">
+                <div class="overlay"></div>
+                <div class="info">
+                    <h3>Collections</h3>
+                    <p>Minecraft Skin • Collection</p> 
+                </div>
+            </div>
+
+            <!-- SKIN EXAMPLES -->
+            <div class="portfolio-item fade-in" onclick="openLightbox(this)">
+                <span class="category-badge">Christmas</span>
+                <div style="background: #000; display: flex; justify-content: center; align-items: center; width: 100%; height: 300px;">
+                    <img src="assets/skins/christmas.png" alt="Christmas" style="width:80%; height:80%; object-fit: contain; display: block;">
+                </div>
+                <div class="overlay"></div>
+                <div class="info">
+                    <h3>Christmas Skins</h3>
+                    <p>Minecraft Skin • Marketplace</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item fade-in" onclick="openLightbox(this)">
+                <span class="category-badge">Pink Goth</span>
+                <img src="assets/skins/pink_goth.png" alt="Pink Goth">
+                <div class="overlay"></div>
+                <div class="info">
+                    <h3>Pink Goth</h3>
+                    <p>Minecraft Skin • Marketplace</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item fade-in" onclick="openLightbox(this)">
+                <span class="category-badge">Golden</span>
+                <div style="background: #000; display: flex; justify-content: center; align-items: center; width: 100%; height: 330px;">
+                    <img src="assets/skins/golden.png" alt="Golden" style="width:95%; height:95%; object-fit: contain; display: block;">
+                </div>
+                <div class="overlay"></div>
+                <div class="info">
+                    <h3>Golden Style</h3>
+                    <p>Minecraft Skin • Marketplace</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item fade-in" onclick="openLightbox(this)">
+                <span class="category-badge">Deep Dark Spirits</span>
+                <div style="background: #000; display: flex; justify-content: center; align-items: center; width: 100%; height: 290px;">
+                    <img src="assets/skins/deep_dark_spirits.png" alt="Deep Dark Spirits" style="width:90%; height:90%; object-fit: contain; display: block;">
+                </div>
+                <div class="overlay"></div>
+                <div class="info">
+                    <h3>Deep Dark Spirits</h3>
+                    <p>Minecraft Skin • Marketplace</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item fade-in" onclick="openLightbox(this)">
+                <span class="category-badge">ANIMATED</span>
+                <div style="background: #000; display: flex; justify-content: center; align-items: center; width: 100%; height: 290px;">
+                    <img src="assets/skins/shadows.png" alt="Shadows" style="width:100%; height:100%; object-fit: contain; display: block;">
+                </div>
+                <div class="overlay"></div>
+                <div class="info">
+                    <h3>Shadows</h3>
+                    <p>Minecraft Skin • Marketplace</p>
+                </div>
+            </div>
+
+            <!-- ADD MORE MINECRAFT SKIN ITEMS HERE -->
+
+        </div>
+    </section>
+
     </div><!-- End of Works wrapper -->
 
     <section id="about">
         <div class="section-header">
             <h2 class="section-title">ABOUT <span class="accent">ME</span></h2>
-            <span class="section-number">04</span>
+            <span class="section-number">05</span>
         </div>
         
         <div class="about-content">
             <div class="about-text">
                 <p>
                     I'm a <strong> Artist</strong> specializing for Minecraft in custom 3D models, particle effects, 
-                    and immersive level designs. With expertise in Blockbench and Snowstorm, I create 
+                    and immersive level designs. With expertise in Blockbench, Aseprite, and Snowstorm, I create 
                     detailed entities, items, and stunning VFX for Minecraft servers and Marketplace.
                 </p>
                 <p>
@@ -368,11 +468,87 @@
             </div>
         </div>
     </section>
+    <section id="clients">
+        <div class="section-header">
+            <h2 class="section-title">Worked with these <span class="accent">CLIENTS</span></h2>
+            <span class="section-number">06</span>
+        </div>
+        
+        <style>
+            .clients-content {
+                transition: transform 0.25s cubic-bezier(.32,2,.55,.27);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .clients-content:hover {
+                transform: scale(1.08);
+                z-index: 2;
+            }
+        </style>
+        <div style="display: flex; flex-direction: column; align-items: center;"    >
+            <div class="clients-list" style="display: flex; flex-wrap: wrap; flex-direction: row; gap: 64px 90px; max-width: 1150px; justify-content: center; align-items: center;">
+                <div class="clients-content">
+                    <a href="https://www.youtube.com/channel/UCm99c6g9MKBL4lNTlWrjyFQ" target="_blank" rel="noopener">
+                        <img src="assets/clients/checkpoint.jpg" alt="Checkpoint" style="border-radius: 50%; width: 140px; height: 140px; object-fit: cover;">
+                    </a>
+                </div>
+                <div class="clients-content">
+                    <a href="https://www.cyclone.games" target="_blank" rel="noopener">
+                        <img src="assets/clients/cyclone.png" alt="CycloneMC" style="border-radius: 50%; width: 140px; height: 140px; object-fit: cover;">
+                    </a>
+                </div>
+                <div class="clients-content">
+                    <a href="https://www.youtube.com/channel/UC0eLBYhxW9HC0P9PXQ73mpQ" target="_blank" rel="noopener">
+                        <img src="assets/clients/cash.jpg" alt="Client 3" style="border-radius: 50%; width: 140px; height: 140px; object-fit: cover;">
+                    </a>
+                </div>
+                <div class="clients-content">
+                    <a href="https://www.youtube.com/@nico" target="_blank" rel="noopener">
+                        <img src="assets/clients/nico.jpg" alt="Client 4" style="border-radius: 50%; width: 140px; height: 140px; object-fit: cover;">
+                    </a>
+                </div>
+                <div class="clients-content">
+                    <a href="https://www.youtube.com/channel/UCy85PyiVv9RpTGvh2m8bUhw" target="_blank" rel="noopener">
+                        <img src="assets/clients/kubo.jpg" alt="Client 5" style="border-radius: 50%; width: 140px; height: 140px; object-fit: cover;">
+                    </a>
+                </div>
+                
+                <div class="clients-list" style="display: flex; flex-wrap: wrap; flex-direction: row; gap: 64px 90px; max-width: 1150px; justify-content: center; align-items: center;">
+                <div class="clients-content">
+                    <a href="https://upstairsmc.com" target="_blank" rel="noopener">
+                        <img src="assets/clients/upstairs.png" alt="Checkpoint" style="border-radius: 50%; width: 140px; height: 140px; object-fit: cover;">
+                    </a>
+                </div>
+                <div class="clients-content">
+                    <a href="https://www.4ksstudios.com" target="_blank" rel="noopener">
+                        <img src="assets/clients/4ks.png" alt="CycloneMC" style="border-radius: 50%; width: 140px; height: 140px; object-fit: cover;">
+                    </a>
+                </div>
+                <div class="clients-content">
+                    <a href="https://www.youtube.com/c/DodoStudios" target="_blank" rel="noopener">
+                        <img src="assets/clients/dodo.jpg" alt="Client 3" style="border-radius: 50%; width: 140px; height: 140px; object-fit: cover;">
+                    </a>
+                </div>
+                <div class="clients-content">
+                    <a href="https://www.youtube.com/@Bionic" target="_blank" rel="noopener">
+                        <img src="assets/clients/bionic.jpg" alt="Client 4" style="border-radius: 50%; width: 140px; height: 140px; object-fit: cover;">
+                    </a>
+                </div>
+                <div class="clients-content">
+                    <a href="https://www.youtube.com/@JustAPepper" target="_blank" rel="noopener">
+                        <img src="assets/clients/pepper.jpg" alt="Client 5" style="border-radius: 50%; width: 140px; height: 140px; object-fit: cover;">
+                    </a>
+                </div>            
+            </div>
+        </div>
+        
+    </section>
 
     <section id="contact">
         <div class="section-header">
             <h2 class="section-title">GET IN <span class="accent">TOUCH</span></h2>
-            <span class="section-number">05</span>
+            <span class="section-number">07</span>
         </div>
         
         <div class="contact-content">
@@ -385,13 +561,14 @@
                 <a href="mailto:vinwijaya327@gmail.com" class="contact-link">Email</a>
                 <a href="https://discord.com/users/bepoo_" target="_blank" class="contact-link">Discord</a>
                 <a href="https://x.com/bepounyu" target="_blank" class="contact-link">Twitter</a>
+                <a href="https://www.instagram.com/bepoox/" target="_blank" class="contact-link">Instagram</a>
             </div>
         </div>
     </section>
 
     <footer>
         <span>© 2025 KorD. ALL RIGHTS RESERVED.</span>
-        <span class="minecraft-credit">◆ BUILT WITH BLOCKS ◆</span>
+        <span class="minecraft-credit">◆ BUILT WITH PIXELS ◆</span>
     </footer>
 
     <!-- Lightbox Modal -->
