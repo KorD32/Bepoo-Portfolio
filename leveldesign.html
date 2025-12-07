@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level Design | Bepoo Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;500&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="grid-bg"></div>
+
+    <nav>
+        <a href="index.html" class="logo">Bepoo</a>
+        <ul class="nav-links">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#works">Works</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="levels" style="padding-top: 8rem;">
+        <div class="section-header">
+            <h2 class="section-title">LEVEL <span class="accent">DESIGN</span></h2>
+            <span class="section-number">02</span>
+        </div>
+        
+        <div class="portfolio-grid">
+            
+            <!-- FEATURED BUILD -->
+            <div class="portfolio-item featured fade-in" onclick="openLightbox(this)">
+                <span class="category-badge">Ice Verse</span>
+                <img src="assets/leveldesign/iceverse.jpeg" alt="Ice Verse">
+                <div class="overlay"></div>
+                <div class="info">
+                    <h3>Ice Verse</h3>
+                    <p>Minecraft Build • NFT World</p>
+                </div>
+            </div>
+
+            <!-- BUILD EXAMPLES -->
+            <div class="portfolio-item fade-in" onclick="openLightbox(this)">
+                <span class="category-badge">Oriental Floating Island</span>
+                <img src="assets/leveldesign/oriental_floating_island.jpeg" alt="Oriental Floating Island">
+                <div class="overlay"></div>
+                <div class="info">
+                    <h3>Oriental Floating Island</h3>
+                    <p>Minecraft Build • Spawn</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item fade-in" onclick="openLightbox(this)">
+                <span class="category-badge">HUB</span>
+                <img src="assets/leveldesign/castle_in_the_sky.png" alt="Castle in the Sky">
+                <div class="overlay"></div>
+                <div class="info">
+                    <h3>Castle in the Sky</h3>
+                    <p>Minecraft Build • HUB</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item fade-in" onclick="openLightbox(this)">
+                <span class="category-badge">Interior</span>
+                <img src="assets/leveldesign/medieval_interior.jpeg" alt="Adventure Map">
+                <div class="overlay"></div>
+                <div class="info">
+                    <h3>Medieval Interior</h3>
+                    <p>Minecraft Build • Interior</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item fade-in" onclick="openLightbox(this)">
+                <span class="category-badge">Spawn</span>
+                <img src="assets/leveldesign/saruei_spawn.jpeg" alt="Saruei Spawn">
+                <div class="overlay"></div>
+                <div class="info">
+                    <h3>CUSTOM TERRAIN</h3>
+                    <p>WorldPainter • Vtuber Spawn</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item fade-in" onclick="openLightbox(this)">
+                <span class="category-badge">Interior</span>
+                <img src="assets/leveldesign/gothic_interior.png" alt="Gothic Interior">
+                <div class="overlay"></div>
+                <div class="info">
+                    <h3>Gothic Interior</h3>
+                    <p>Minecraft Build • Gothic Interior</p>
+                </div>
+            </div>
+
+            <!-- ADD MORE LEVEL DESIGN ITEMS HERE -->
+
+        </div>
+    </section>
+
+    <footer>
+        <span>© 2025 KorD. ALL RIGHTS RESERVED.</span>
+        <span class="minecraft-credit">◆ BUILT WITH PIXELS ◆</span>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+        <button class="lightbox-close" onclick="closeLightbox(event)">×</button>
+        <div class="lightbox-content" id="lightbox-content"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

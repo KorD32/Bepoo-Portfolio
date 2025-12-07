@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VFX & Particles | Bepoo Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;500&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="grid-bg"></div>
+
+    <nav>
+        <a href="index.html" class="logo">Bepoo</a>
+        <ul class="nav-links">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#works">Works</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="vfx" class="vfx-section" style="padding-top: 8rem;">
+        <div class="section-header">
+            <h2 class="section-title"><span class="accent">VFX</span> & PARTICLES</h2>
+            <span class="section-number">03</span>
+        </div>
+        
+        <div class="portfolio-grid">
+            
+            <!-- FEATURED VFX -->
+            <div class="portfolio-item featured fade-in" onclick="openLightbox(this)">
+                <span class="category-badge">PARTICLES</span>
+                <video src="" poster="https://placehold.co/1200x600/1a1a1a/5dba3c?text=PARTICLE+EFFECTS" muted loop playsinline></video>
+                <div class="play-icon"></div>
+                <div class="overlay"></div>
+                <div class="info">
+                    <h3>PARTICLE SYSTEM</h3>
+                    <p>Snowstorm • Bedrock</p>
+                </div>
+            </div>
+
+            <!-- VFX VIDEO EXAMPLES -->
+            <div class="portfolio-item fade-in" onclick="openLightbox(this)">
+                <span class="category-badge">SPELL</span>
+                <video src="" poster="https://placehold.co/800x500/1a1a1a/5dba3c?text=SPELL+VFX" muted loop playsinline></video>
+                <div class="play-icon"></div>
+                <div class="overlay"></div>
+                <div class="info">
+                    <h3>MAGIC SPELL VFX</h3>
+                    <p>Snowstorm • Animation</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item fade-in" onclick="openLightbox(this)">
+                <span class="category-badge">EXPLOSION</span>
+                <video src="" poster="https://placehold.co/800x500/1a1a1a/5dba3c?text=EXPLOSION+VFX" muted loop playsinline></video>
+                <div class="play-icon"></div>
+                <div class="overlay"></div>
+                <div class="info">
+                    <h3>EXPLOSION EFFECT</h3>
+                    <p>Particles • Combat</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item fade-in" onclick="openLightbox(this)">
+                <span class="category-badge">AURA</span>
+                <video src="" poster="https://placehold.co/800x500/1a1a1a/5dba3c?text=AURA+VFX" muted loop playsinline></video>
+                <div class="play-icon"></div>
+                <div class="overlay"></div>
+                <div class="info">
+                    <h3>CHARACTER AURA</h3>
+                    <p>Snowstorm • Looping</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item fade-in" onclick="openLightbox(this)">
+                <span class="category-badge">TRAIL</span>
+                <video src="" poster="https://placehold.co/800x500/1a1a1a/5dba3c?text=TRAIL+VFX" muted loop playsinline></video>
+                <div class="play-icon"></div>
+                <div class="overlay"></div>
+                <div class="info">
+                    <h3>WEAPON TRAIL</h3>
+                    <p>Particles • Movement</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item fade-in" onclick="openLightbox(this)">
+                <span class="category-badge">AMBIENT</span>
+                <video src="" poster="https://placehold.co/800x500/1a1a1a/5dba3c?text=AMBIENT+VFX" muted loop playsinline></video>
+                <div class="play-icon"></div>
+                <div class="overlay"></div>
+                <div class="info">
+                    <h3>AMBIENT PARTICLES</h3>
+                    <p>Snowstorm • Environment</p>
+                </div>
+            </div>
+
+            <!-- ADD MORE VFX VIDEO ITEMS HERE -->
+
+        </div>
+    </section>
+
+    <footer>
+        <span>© 2025 KorD. ALL RIGHTS RESERVED.</span>
+        <span class="minecraft-credit">◆ BUILT WITH PIXELS ◆</span>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+        <button class="lightbox-close" onclick="closeLightbox(event)">×</button>
+        <div class="lightbox-content" id="lightbox-content"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

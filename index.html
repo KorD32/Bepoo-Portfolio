@@ -8,12 +8,129 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;500&family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Navigation Cards Grid */
+        .nav-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+
+        .nav-card {
+            position: relative;
+            aspect-ratio: 16/10;
+            overflow: hidden;
+            background: var(--bg-secondary);
+            border: 2px solid var(--border);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            clip-path: polygon(
+                8px 0, calc(100% - 8px) 0, 100% 8px,
+                100% calc(100% - 8px), calc(100% - 8px) 100%,
+                8px 100%, 0 calc(100% - 8px), 0 8px
+            );
+        }
+
+        .nav-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-8px);
+            box-shadow: 
+                0 12px 0 -6px var(--bg-primary),
+                0 12px 0 -4px var(--accent);
+        }
+
+        .nav-card-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .nav-card:hover .nav-card-image {
+            transform: scale(1.1);
+        }
+
+        .nav-card-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 0%, rgba(12, 12, 12, 0.7) 70%, rgba(12, 12, 12, 0.95) 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 1.5rem;
+        }
+
+        .nav-card-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2rem;
+            letter-spacing: 0.1em;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+        }
+
+        .nav-card-subtitle {
+            font-size: 0.65rem;
+            font-family: 'Press Start 2P', monospace;
+            color: var(--text-secondary);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .works-section {
+            padding: 6rem 3rem;
+        }
+
+        .works-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .works-header h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 3.5rem;
+            letter-spacing: 0.1em;
+            margin-bottom: 1rem;
+        }
+
+        .works-header h2 .accent {
+            color: var(--accent);
+        }
+
+        .works-header p {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 1024px) {
+            .nav-cards-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-cards-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .works-header h2 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="grid-bg"></div>
 
     <nav>
-        <a href="#" class="logo">Bepoo</a>
+        <a href="index.html" class="logo">Bepoo</a>
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#works">Works</a></li>
@@ -46,399 +163,205 @@
             </div>
         </div>
     </section>
-
-    <!-- ============================================
-         WORKS SECTION WRAPPER
-         Contains: 3D Models, Level Design, VFX, Minecraft Skins
-    ============================================ -->
-    <div id="works">
-
-    <!-- ============================================
-         3D MODELS SECTION
-         
-         HOW TO ADD NEW WORKS:
-         
-         For IMAGES (.png/.gif): Copy and paste this template:
-         
-            <div class="portfolio-item fade-in" onclick="openLightbox(this)">
-                <span class="category-badge">MODEL TYPE</span>
-                <img src="YOUR_IMAGE_PATH.png" alt="Project Name">
-                <div class="overlay"></div>
-                <div class="info">
-                    <h3>PROJECT NAME</h3>
-                    <p>Brief description here</p>
-                </div>
-            </div>
-         
-         For FEATURED (larger) items: Add class="portfolio-item featured fade-in"
-         
-    ============================================ -->
-    
-    <section id="models">
-        <div class="section-header">
-            <h2 class="section-title">3D <span class="accent">MODELS</span></h2>
-            <span class="section-number">01</span>
+    <section id="featured-projects" class="featured-projects-section">
+        <div class="section-header fade-in">
+            <h2 class="section-title" style="margin-left: 6rem;">MY <span class="accent">WORKS</span></h2>
+            <p class="section-description" style="margin-right: 2rem;">A few highlighted and recent works</p>
         </div>
-        
-        <div class="portfolio-grid">
-            
-            <!-- FEATURED MODEL -->
-            <div class="portfolio-item featured fade-in" onclick="openLightbox(this)">
-                <span class="category-badge">ENTITY</span>
-                <!-- Replace src with your image path (.png or .gif) -->
-                <img src="assets/3dmodel/test.gif" alt="Featured Entity Model">
-                <div class="overlay"></div>
-                <div class="info">
-                    <h3>CUSTOM ENTITY MODEL</h3>
-                    <p>Blockbench • Animated</p>
+        <div class="featured-projects-grid">
+            <!-- Project Example 1 -->
+            <div class="featured-project-card fade-in">
+                <img src="assets/projects/mrbeast.jpg" alt="Mr.Beast Gaming Build Challenge" class="featured-project-thumb">
+                <div class="featured-project-info">
+                    <h3>Mr.Beast Gaming Build Challenge</h3>
+                    <p>Part of The Winner Team Indonesia, in Mr.Beast Gaming Build Challenge</p>
+                    <a href="https://www.youtube.com/watch?v=qTMKHZelGAs" target="_blank" class="external-link" aria-label="View Project"></a>
                 </div>
             </div>
+            <!-- Project Example 2 -->
+            <div class="featured-project-card fade-in">
+                <img src="assets/projects/cyclone_games.jpg" alt="cyclone" class="featured-project-thumb">
 
-            <!-- MODEL EXAMPLES -->
-            <div class="portfolio-item fade-in" onclick="openLightbox(this)">
-                <span class="category-badge">ARMOR</span>
-                <div style="background: #000; display: flex; justify-content: center; align-items: center; width: 100%; height: 100%;">
-                    <img src="assets/3dmodel/armor_1.png" alt="Custom Armor" style="display: block; max-width: 100%; height: auto;">
-                </div>
-                <div class="overlay"></div>
-                <div class="info">
-                    <h3>CUSTOM ARMOR SET</h3>
-                    <p>Blockbench • Equipment</p>
+                <div class="featured-project-info">
+                    <h3>MOBS PETS ADD-ON</h3>
+                    <p>Creating Custom Particles for the Mob Pets Add-On</p>
+                    <a href="https://www.minecraft.net/en-us/marketplace/pdp/cyclone/mob-pets-add--on-1.0/995515ce-2492-4cd9-a2a7-639033ace57b" target="_blank" class="external-link" aria-label="View Project"></a>
                 </div>
             </div>
-
-            <div class="portfolio-item fade-in" onclick="openLightbox(this)">
-                <span class="category-badge">WEAPON</span>
-                <img src="assets/3dmodel/weapon_1.gif" alt="Magical Staff" style="width:480px; height:276px;">
-                <div class="overlay"></div>
-                <div class="info">
-                    <h3>Magical Staff</h3>
-                    <p>Blockbench • Item</p>
+            <!-- Project Example 3 -->
+            <div class="featured-project-card fade-in">
+                <img src="assets/projects/security_expansion.jpeg" alt="4KS Studios" class="featured-project-thumb">
+                <div class="featured-project-info">
+                    <h3>SECURITY EXPANSION</h3>
+                    <p>Creating Building for Security Expansion</p>
+                    <a href="https://www.bedrockexplorer.com/@4ks-studios/security-expansion" target="_blank" class="external-link" aria-label="View Project"></a>
                 </div>
             </div>
-
-            <div class="portfolio-item fade-in" onclick="openLightbox(this)">
-                <span class="category-badge">MOB</span>
-                <img src="https://placehold.co/800x500/1a1a1a/5dba3c?text=CUSTOM+MOB" alt="Custom Mob">
-                <div class="overlay"></div>
-                <div class="info">
-                    <h3>CUSTOM MOB MODEL</h3>
-                    <p>Blockbench • Entity</p>
+            <!-- Add more projects as needed -->
+            <div class="featured-project-card fade-in">
+                <img src="assets/projects/seasons.jpg" alt="Glorious Studios" class="featured-project-thumb">
+                <div class="featured-project-info">
+                    <h3>SEASONS ADD-ON</h3>
+                    <p>Creating Custom Particles for the Seasons Add-On</p>
+                    <a href="https://www.bedrockexplorer.com/@glorious-studios/seasons-add-on-biomes-animals-and-more" target="_blank" class="external-link" aria-label="View Project"></a>
                 </div>
             </div>
-
-            <div class="portfolio-item fade-in" onclick="openLightbox(this)">
-                <span class="category-badge">ITEM</span>
-                <img src="assets/3dmodel/cosmetics.png" alt="3D Cosmetics" style="width:480px; height:276px;">
-                <div class="overlay"></div>
-                <div class="info">
-                    <h3>3D Cosmetics</h3>
-                    <p>Blockbench • Cosmetics</p>
+            <div class="featured-project-card fade-in">
+                <img src="assets/projects/anime_jutsu.jpg" alt="Kubo Studios" class="featured-project-thumb">
+                <div class="featured-project-info">
+                    <h3>ANIME JUTSU ADD-ON</h3>
+                    <p>Creating custom particles for the Anime Jutsu Add-On</p>
+                    <a href="https://www.minecraft.net/en-us/marketplace/pdp/kubo-studios/anime-jutsu-add--on/143d25c4-773b-49e0-85d0-20090b11317f" target="_blank" class="external-link" aria-label="View Project"></a>
                 </div>
             </div>
-
-            <div class="portfolio-item fade-in" onclick="openLightbox(this)">
-                <span class="category-badge">BLOCK</span>
-                <img src="https://placehold.co/800x500/1a1a1a/5dba3c?text=CUSTOM+BLOCK" alt="Custom Block">
-                <div class="overlay"></div>
-                <div class="info">
-                    <h3>CUSTOM BLOCK MODEL</h3>
-                    <p>Blockbench • Connected Textures</p>
+            <div class="featured-project-card fade-in">
+                <img src="assets/projects/deep_dark_spirits.jpg" alt="Dodo Studios" class="featured-project-thumb">
+                <div class="featured-project-info">
+                    <h3>DEEP DARK SPIRITS SKINS</h3>
+                    <p>Creating custom skins for the Deep Dark Spirits</p>
+                    <a href="https://www.bedrockexplorer.com/@dodo-studios/deep-dark-spirits" target="_blank" class="external-link" aria-label="View Project"></a>
                 </div>
             </div>
-
-            <!-- ADD MORE 3D MODEL ITEMS HERE -->
-
         </div>
+        <style>
+            .featured-projects-section {
+                padding: 4rem 0 2rem 0;
+                background: var(--bg-secondary);
+            }
+            .featured-projects-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+                gap: 2rem;
+                max-width: 1300px;
+                margin: 0 auto;
+            }
+            .featured-project-card {
+                background: var(--bg-primary);
+                border-radius: 14px;
+                box-shadow: 0 2px 12px rgb(0 0 0 / 8%);
+                overflow: hidden;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                transition: transform 0.2s;
+            }
+            .featured-project-card:hover {
+                transform: translateY(-6px) scale(1.01);
+                box-shadow: 0 8px 28px rgb(0 0 0 / 14%);
+            }
+            .featured-project-thumb {
+                width: 100%;
+                height: 220px;
+                object-fit: cover;
+                background: #222;
+                display: block;
+            }
+            .featured-project-info {
+                padding: 1.3rem 1.2rem;
+                text-align: center;
+            }
+            .featured-project-info h3 {
+                margin: 0 0 .5em 0;
+                font-size: 1.23rem;
+                font-family: 'Bebas Neue', Arial, sans-serif;
+                letter-spacing: 1px;
+            }
+            .featured-project-info p {
+                color: var(--text-secondary);
+                font-size: .97rem;
+                margin-bottom: 1em;
+            }
+            .external-link {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                width: 44px;
+                height: 44px;
+                background: var(--accent);
+                color: #fff;
+                border-radius: 50%;
+                text-decoration: none;
+                transition: all 0.22s;
+                position: relative;
+            }
+            .external-link::after {
+                content: '→';
+                font-size: 1.2rem;
+                font-weight: bold;
+            }
+            .external-link:hover {
+                background: #d4a617;
+                transform: scale(1.1) rotate(-45deg);
+            }
+            @media (max-width: 850px) {
+                .featured-projects-grid {
+                    grid-template-columns: 1fr;
+                }
+                .featured-project-thumb {
+                    height: 220px;
+                }
+            }
+        </style>
     </section>
 
-    <!-- ============================================
-         LEVEL DESIGN SECTION
-         
-         For IMAGES (.png/.gif): Same template as above
-         
-    ============================================ -->
-
-    <section id="levels">
-        <div class="section-header">
-            <h2 class="section-title">LEVEL <span class="accent">DESIGN</span></h2>
-            <span class="section-number">02</span>
+    <section id="works" class="works-section">
+        <div class="works-header fade-in">
+            <h2>PORTFOLIO</h2>
+            <p>Explore my portfolio across different creative disciplines</p>
         </div>
         
-        <div class="portfolio-grid">
-            
-            <!-- FEATURED BUILD -->
-            <div class="portfolio-item featured fade-in" onclick="openLightbox(this)">
-                <span class="category-badge">Ice Verse</span>
-                <img src="assets/leveldesign/iceverse.jpeg" alt="Ice Verse">
-                <div class="overlay"></div>
-                <div class="info">
-                    <h3>Ice Verse</h3>
-                    <p>Minecraft Build • NFT World</p>
+        <div class="nav-cards-grid">
+            <!-- 3D Models Card -->
+            <a href="models.html" class="nav-card fade-in">
+                <img src="assets/3dmodel/test.gif" alt="3D Models" class="nav-card-image">
+                <div class="nav-card-overlay">
+                    <h3 class="nav-card-title">3D Models</h3>
+                    <p class="nav-card-subtitle">Blockbench • Entities • Items</p>
                 </div>
-            </div>
+            </a>
 
-            <!-- BUILD EXAMPLES -->
-            <div class="portfolio-item fade-in" onclick="openLightbox(this)">
-                <span class="category-badge">Oriental Floating Island</span>
-                <img src="assets/leveldesign/oriental_floating_island.jpeg" alt="Oriental Floating Island">
-                <div class="overlay"></div>
-                <div class="info">
-                    <h3>Oriental Floating Island</h3>
-                    <p>Minecraft Build • Spawn</p>
+            <!-- Level Design Card -->
+            <a href="leveldesign.html" class="nav-card fade-in">
+                <img src="assets/leveldesign/iceverse.jpeg" alt="Level Design" class="nav-card-image">
+                <div class="nav-card-overlay">
+                    <h3 class="nav-card-title">Level Design</h3>
+                    <p class="nav-card-subtitle">Minecraft Builds • Spawns • Hubs</p>
                 </div>
-            </div>
+            </a>
 
-            <div class="portfolio-item fade-in" onclick="openLightbox(this)">
-                <span class="category-badge">HUB</span>
-                <img src="assets/leveldesign/castle_in_the_sky.png" alt="Castle in the Sky">
-                <div class="overlay"></div>
-                <div class="info">
-                    <h3>Castle in the Sky</h3>
-                    <p>Minecraft Build • HUB</p>
+            <!-- VFX Card -->
+            <a href="vfx.html" class="nav-card fade-in">
+                <img src="https://placehold.co/800x500/1a1a1a/5dba3c?text=VFX+PARTICLES" alt="VFX & Particles" class="nav-card-image">
+                <div class="nav-card-overlay">
+                    <h3 class="nav-card-title">VFX & Particles</h3>
+                    <p class="nav-card-subtitle">Snowstorm • Effects • Animations</p>
                 </div>
-            </div>
+            </a>
 
-            <div class="portfolio-item fade-in" onclick="openLightbox(this)">
-                <span class="category-badge">Interior</span>
-                <img src="assets/leveldesign/medieval_interior.jpeg" alt="Adventure Map">
-                <div class="overlay"></div>
-                <div class="info">
-                    <h3>Medieval Interior</h3>
-                    <p>Minecraft Build • Interior</p>
+            <!-- Animations Card -->
+            <a href="animations.html" class="nav-card fade-in">
+                <img src="https://placehold.co/800x500/1a1a1a/5dba3c?text=ANIMATIONS" alt="Animations" class="nav-card-image">
+                <div class="nav-card-overlay">
+                    <h3 class="nav-card-title">Animations</h3>
+                    <p class="nav-card-subtitle">Rigged • Animated • Showcase</p>
                 </div>
-            </div>
+            </a>
 
-            <div class="portfolio-item fade-in" onclick="openLightbox(this)">
-                <span class="category-badge">Spawn</span>
-                <img src="assets/leveldesign/saruei_spawn.jpeg" alt="Saruei Spawn">
-                <div class="overlay"></div>
-                <div class="info">
-                    <h3>CUSTOM TERRAIN</h3>
-                    <p>WorldPainter • Vtuber Spawn</p>
+            <!-- Minecraft Skins Card -->
+            <a href="skins.html" class="nav-card fade-in">
+                <img src="assets/skins/random.png" alt="Minecraft Skins" class="nav-card-image">
+                <div class="nav-card-overlay">
+                    <h3 class="nav-card-title">Minecraft Skins</h3>
+                    <p class="nav-card-subtitle">Marketplace • Collections • Custom</p>
                 </div>
-            </div>
-
-            <div class="portfolio-item fade-in" onclick="openLightbox(this)">
-                <span class="category-badge">Interior</span>
-                <img src="assets/leveldesign/gothic_interior.png" alt="Gothic Interior">
-                <div class="overlay"></div>
-                <div class="info">
-                    <h3>Gothic Interior</h3>
-                    <p>Minecraft Build • Gothic Interior</p>
-                </div>
-            </div>
-
-            <!-- ADD MORE LEVEL DESIGN ITEMS HERE -->
-
+            </a>
         </div>
     </section>
-
-    <!-- ============================================
-         VFX SECTION - VIDEOS ONLY
-         
-         For VIDEOS: Use this template:
-         
-            <div class="portfolio-item fade-in" onclick="openLightbox(this)">
-                <span class="category-badge">VFX TYPE</span>
-                <video src="YOUR_VIDEO.mp4" poster="THUMBNAIL.png" muted loop playsinline></video>
-                <div class="play-icon"></div>
-                <div class="overlay"></div>
-                <div class="info">
-                    <h3>PROJECT NAME</h3>
-                    <p>Brief description here</p>
-                </div>
-            </div>
-         
-    ============================================ -->
-
-    <section id="vfx" class="vfx-section">
-        <div class="section-header">
-            <h2 class="section-title"><span class="accent">VFX</span> & PARTICLES</h2>
-            <span class="section-number">03</span>
-        </div>
-        
-        <div class="portfolio-grid">
-            
-            <!-- FEATURED VFX -->
-            <div class="portfolio-item featured fade-in" onclick="openLightbox(this)">
-                <span class="category-badge">PARTICLES</span>
-                <video src="" poster="https://placehold.co/1200x600/1a1a1a/5dba3c?text=PARTICLE+EFFECTS" muted loop playsinline></video>
-                <div class="play-icon"></div>
-                <div class="overlay"></div>
-                <div class="info">
-                    <h3>PARTICLE SYSTEM</h3>
-                    <p>Snowstorm • Bedrock</p>
-                </div>
-            </div>
-
-            <!-- VFX VIDEO EXAMPLES -->
-            <div class="portfolio-item fade-in" onclick="openLightbox(this)">
-                <span class="category-badge">SPELL</span>
-                <video src="" poster="https://placehold.co/800x500/1a1a1a/5dba3c?text=SPELL+VFX" muted loop playsinline></video>
-                <div class="play-icon"></div>
-                <div class="overlay"></div>
-                <div class="info">
-                    <h3>MAGIC SPELL VFX</h3>
-                    <p>Snowstorm • Animation</p>
-                </div>
-            </div>
-
-            <div class="portfolio-item fade-in" onclick="openLightbox(this)">
-                <span class="category-badge">EXPLOSION</span>
-                <video src="" poster="https://placehold.co/800x500/1a1a1a/5dba3c?text=EXPLOSION+VFX" muted loop playsinline></video>
-                <div class="play-icon"></div>
-                <div class="overlay"></div>
-                <div class="info">
-                    <h3>EXPLOSION EFFECT</h3>
-                    <p>Particles • Combat</p>
-                </div>
-            </div>
-
-            <div class="portfolio-item fade-in" onclick="openLightbox(this)">
-                <span class="category-badge">AURA</span>
-                <video src="" poster="https://placehold.co/800x500/1a1a1a/5dba3c?text=AURA+VFX" muted loop playsinline></video>
-                <div class="play-icon"></div>
-                <div class="overlay"></div>
-                <div class="info">
-                    <h3>CHARACTER AURA</h3>
-                    <p>Snowstorm • Looping</p>
-                </div>
-            </div>
-
-            <div class="portfolio-item fade-in" onclick="openLightbox(this)">
-                <span class="category-badge">TRAIL</span>
-                <video src="" poster="https://placehold.co/800x500/1a1a1a/5dba3c?text=TRAIL+VFX" muted loop playsinline></video>
-                <div class="play-icon"></div>
-                <div class="overlay"></div>
-                <div class="info">
-                    <h3>WEAPON TRAIL</h3>
-                    <p>Particles • Movement</p>
-                </div>
-            </div>
-
-            <div class="portfolio-item fade-in" onclick="openLightbox(this)">
-                <span class="category-badge">AMBIENT</span>
-                <video src="" poster="https://placehold.co/800x500/1a1a1a/5dba3c?text=AMBIENT+VFX" muted loop playsinline></video>
-                <div class="play-icon"></div>
-                <div class="overlay"></div>
-                <div class="info">
-                    <h3>AMBIENT PARTICLES</h3>
-                    <p>Snowstorm • Environment</p>
-                </div>
-            </div>
-
-            <!-- ADD MORE VFX VIDEO ITEMS HERE -->
-
-        </div>
-    </section>
-
-    <!-- ============================================
-         MINECRAFT SKINS SECTION
-         
-         For IMAGES (.png/.gif): Use the same template as 3D Models
-         
-            <div class="portfolio-item fade-in" onclick="openLightbox(this)">
-                <span class="category-badge">SKIN TYPE</span>
-                <img src="assets/skins/YOUR_SKIN.png" alt="Skin Name">
-                <div class="overlay"></div>
-                <div class="info">
-                    <h3>SKIN NAME</h3>
-                    <p>Description here</p>
-                </div>
-            </div>
-         
-    ============================================ -->
-
-    <section id="skins">
-        <div class="section-header">
-            <h2 class="section-title">MINECRAFT <span class="accent">SKINS</span></h2>
-            <span class="section-number">04</span>
-        </div>
-        
-        <div class="portfolio-grid">
-            
-            <!-- FEATURED SKIN -->
-            <div class="portfolio-item featured fade-in" onclick="openLightbox(this)">
-                <span class="category-badge">Collections</span>
-                <img src="assets/skins/random.png" alt="Collection">
-                <div class="overlay"></div>
-                <div class="info">
-                    <h3>Collections</h3>
-                    <p>Minecraft Skin • Collection</p> 
-                </div>
-            </div>
-
-            <!-- SKIN EXAMPLES -->
-            <div class="portfolio-item fade-in" onclick="openLightbox(this)">
-                <span class="category-badge">Christmas</span>
-                <div style="background: #000; display: flex; justify-content: center; align-items: center; width: 100%; height: 300px;">
-                    <img src="assets/skins/christmas.png" alt="Christmas" style="width:80%; height:80%; object-fit: contain; display: block;">
-                </div>
-                <div class="overlay"></div>
-                <div class="info">
-                    <h3>Christmas Skins</h3>
-                    <p>Minecraft Skin • Marketplace</p>
-                </div>
-            </div>
-
-            <div class="portfolio-item fade-in" onclick="openLightbox(this)">
-                <span class="category-badge">Pink Goth</span>
-                <img src="assets/skins/pink_goth.png" alt="Pink Goth">
-                <div class="overlay"></div>
-                <div class="info">
-                    <h3>Pink Goth</h3>
-                    <p>Minecraft Skin • Marketplace</p>
-                </div>
-            </div>
-
-            <div class="portfolio-item fade-in" onclick="openLightbox(this)">
-                <span class="category-badge">Golden</span>
-                <div style="background: #000; display: flex; justify-content: center; align-items: center; width: 100%; height: 330px;">
-                    <img src="assets/skins/golden.png" alt="Golden" style="width:95%; height:95%; object-fit: contain; display: block;">
-                </div>
-                <div class="overlay"></div>
-                <div class="info">
-                    <h3>Golden Style</h3>
-                    <p>Minecraft Skin • Marketplace</p>
-                </div>
-            </div>
-
-            <div class="portfolio-item fade-in" onclick="openLightbox(this)">
-                <span class="category-badge">Deep Dark Spirits</span>
-                <div style="background: #000; display: flex; justify-content: center; align-items: center; width: 100%; height: 290px;">
-                    <img src="assets/skins/deep_dark_spirits.png" alt="Deep Dark Spirits" style="width:90%; height:90%; object-fit: contain; display: block;">
-                </div>
-                <div class="overlay"></div>
-                <div class="info">
-                    <h3>Deep Dark Spirits</h3>
-                    <p>Minecraft Skin • Marketplace</p>
-                </div>
-            </div>
-
-            <div class="portfolio-item fade-in" onclick="openLightbox(this)">
-                <span class="category-badge">ANIMATED</span>
-                <div style="background: #000; display: flex; justify-content: center; align-items: center; width: 100%; height: 290px;">
-                    <img src="assets/skins/shadows.png" alt="Shadows" style="width:100%; height:100%; object-fit: contain; display: block;">
-                </div>
-                <div class="overlay"></div>
-                <div class="info">
-                    <h3>Shadows</h3>
-                    <p>Minecraft Skin • Marketplace</p>
-                </div>
-            </div>
-
-            <!-- ADD MORE MINECRAFT SKIN ITEMS HERE -->
-
-        </div>
-    </section>
-
-    </div><!-- End of Works wrapper -->
 
     <section id="about">
         <div class="section-header">
-            <h2 class="section-title">ABOUT <span class="accent">ME</span></h2>
-            <span class="section-number">05</span>
+            <h2 class="section-title">KNOW <span class="accent">ME</span> BETTER</h2>
+            <span class="section-number">02</span>
         </div>
         
         <div class="about-content">
@@ -468,10 +391,11 @@
             </div>
         </div>
     </section>
+
     <section id="clients">
         <div class="section-header">
             <h2 class="section-title">Worked with these <span class="accent">CLIENTS</span></h2>
-            <span class="section-number">06</span>
+            <span class="section-number">03</span>
         </div>
         
         <style>
@@ -486,7 +410,7 @@
                 z-index: 2;
             }
         </style>
-        <div style="display: flex; flex-direction: column; align-items: center;"    >
+        <div style="display: flex; flex-direction: column; align-items: center;">
             <div class="clients-list" style="display: flex; flex-wrap: wrap; flex-direction: row; gap: 64px 90px; max-width: 1150px; justify-content: center; align-items: center;">
                 <div class="clients-content">
                     <a href="https://www.youtube.com/channel/UCm99c6g9MKBL4lNTlWrjyFQ" target="_blank" rel="noopener">
@@ -548,7 +472,7 @@
     <section id="contact">
         <div class="section-header">
             <h2 class="section-title">GET IN <span class="accent">TOUCH</span></h2>
-            <span class="section-number">07</span>
+            <span class="section-number">04</span>
         </div>
         
         <div class="contact-content">
@@ -557,7 +481,6 @@
                 Available for freelance projects, collaborations, and full-time opportunities. Feel free to reach out! 
             </p>
             <div class="contact-links">
-                <!-- EDIT YOUR CONTACT LINKS HERE -->
                 <a href="mailto:vinwijaya327@gmail.com" class="contact-link">Email</a>
                 <a href="https://discord.com/users/bepoo_" target="_blank" class="contact-link">Discord</a>
                 <a href="https://x.com/bepounyu" target="_blank" class="contact-link">Twitter</a>
@@ -570,12 +493,6 @@
         <span>© 2025 KorD. ALL RIGHTS RESERVED.</span>
         <span class="minecraft-credit">◆ BUILT WITH PIXELS ◆</span>
     </footer>
-
-    <!-- Lightbox Modal -->
-    <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
-        <button class="lightbox-close" onclick="closeLightbox(event)">×</button>
-        <div class="lightbox-content" id="lightbox-content"></div>
-    </div>
 
     <script src="script.js"></script>
 </body>

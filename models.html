@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Models | Bepoo Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;500&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="grid-bg"></div>
+
+    <nav>
+        <a href="index.html" class="logo">Bepoo</a>
+        <ul class="nav-links">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#works">Works</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="models" style="padding-top: 8rem;">
+        <div class="section-header">
+            <h2 class="section-title">3D <span class="accent">MODELS</span></h2>
+            <span class="section-number">01</span>
+        </div>
+        
+        <div class="portfolio-grid">
+            
+            <!-- FEATURED MODEL -->
+            <div class="portfolio-item featured fade-in" onclick="openLightbox(this)">
+                <span class="category-badge">ENTITY</span>
+                <img src="assets/3dmodel/test.gif" alt="Featured Entity Model">
+                <div class="overlay"></div>
+                <div class="info">
+                    <h3>CUSTOM ENTITY MODEL</h3>
+                    <p>Blockbench • Animated</p>
+                </div>
+            </div>
+
+            <!-- MODEL EXAMPLES -->
+            <div class="portfolio-item fade-in" onclick="openLightbox(this)">
+                <span class="category-badge">ARMOR</span>
+                <div style="background: #000; display: flex; justify-content: center; align-items: center; width: 100%; height: 100%;">
+                    <img src="assets/3dmodel/armor_1.png" alt="Custom Armor" style="display: block; max-width: 100%; height: auto;">
+                </div>
+                <div class="overlay"></div>
+                <div class="info">
+                    <h3>CUSTOM ARMOR SET</h3>
+                    <p>Blockbench • Equipment</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item fade-in" onclick="openLightbox(this)">
+                <span class="category-badge">WEAPON</span>
+                <img src="assets/3dmodel/weapon_1.gif" alt="Magical Staff" style="width:480px; height:276px;">
+                <div class="overlay"></div>
+                <div class="info">
+                    <h3>Magical Staff</h3>
+                    <p>Blockbench • Item</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item fade-in" onclick="openLightbox(this)">
+                <span class="category-badge">MOB</span>
+                <img src="https://placehold.co/800x500/1a1a1a/5dba3c?text=CUSTOM+MOB" alt="Custom Mob">
+                <div class="overlay"></div>
+                <div class="info">
+                    <h3>CUSTOM MOB MODEL</h3>
+                    <p>Blockbench • Entity</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item fade-in" onclick="openLightbox(this)">
+                <span class="category-badge">ITEM</span>
+                <img src="assets/3dmodel/cosmetics.png" alt="3D Cosmetics" style="width:480px; height:276px;">
+                <div class="overlay"></div>
+                <div class="info">
+                    <h3>3D Cosmetics</h3>
+                    <p>Blockbench • Cosmetics</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item fade-in" onclick="openLightbox(this)">
+                <span class="category-badge">Vehicle</span>
+                <img src="assets/3dmodel/yellow_car.gif" alt="Sports Car">
+                <div class="overlay"></div>
+                <div class="info">
+                    <h3>Sports Car</h3>
+                    <p>Blockbench • Rideable</p>
+                </div>
+            </div>
+
+            <!-- ADD MORE 3D MODEL ITEMS HERE -->
+
+        </div>
+    </section>
+
+    <footer>
+        <span>© 2025 KorD. ALL RIGHTS RESERVED.</span>
+        <span class="minecraft-credit">◆ BUILT WITH PIXELS ◆</span>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+        <button class="lightbox-close" onclick="closeLightbox(event)">×</button>
+        <div class="lightbox-content" id="lightbox-content"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
