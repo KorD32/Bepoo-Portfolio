@@ -431,8 +431,11 @@ section {
     aspect-ratio: 21/9;
 }
 
+
+
 @media (max-width: 800px) {
-    .portfolio-item.featured {
+    .portfolio-item.featured,
+    .portfolio-item.large {
         grid-column: span 1;
         aspect-ratio: 16/10;
     }
@@ -608,6 +611,69 @@ section {
     border-color: var(--accent);
     transform: translateY(-3px);
     box-shadow: 0 6px 0 -3px var(--accent-glow);
+}
+
+/* View More Button */
+.view-more-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.view-more-btn {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    padding: 1rem 2.5rem;
+    background: transparent;
+    color: var(--accent);
+    border: 2px solid var(--accent);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    clip-path: polygon(
+        8px 0, calc(100% - 8px) 0, 100% 8px,
+        100% calc(100% - 8px), calc(100% - 8px) 100%,
+        8px 100%, 0 calc(100% - 8px), 0 8px
+    );
+}
+
+.view-more-btn:hover {
+    background: var(--accent);
+    color: var(--bg-primary);
+    transform: translateY(-4px);
+    box-shadow: 
+        0 8px 0 -4px var(--bg-primary),
+        0 8px 0 -2px var(--accent);
+}
+
+/* Hidden Items Container */
+.hidden-items {
+    display: none;
+    margin-top: 2rem;
+}
+
+.hidden-items.show {
+    display: grid;
+}
+
+.hidden-items .portfolio-item {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: revealItem 0.5s ease forwards;
+}
+
+.hidden-items .portfolio-item:nth-child(1) { animation-delay: 0.1s; }
+.hidden-items .portfolio-item:nth-child(2) { animation-delay: 0.2s; }
+.hidden-items .portfolio-item:nth-child(3) { animation-delay: 0.3s; }
+.hidden-items .portfolio-item:nth-child(4) { animation-delay: 0.4s; }
+.hidden-items .portfolio-item:nth-child(5) { animation-delay: 0.5s; }
+.hidden-items .portfolio-item:nth-child(6) { animation-delay: 0.6s; }
+
+@keyframes revealItem {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Footer */

@@ -129,3 +129,26 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+// Load More Items functionality
+function loadMoreItems() {
+    const hiddenItems = document.getElementById('hidden-items');
+    const viewMoreBtn = document.getElementById('view-more-btn');
+    
+    if (hiddenItems) {
+        // Show hidden items
+        hiddenItems.classList.add('show');
+        
+        // Observe new fade-in elements for animations
+        const newItems = hiddenItems.querySelectorAll('.portfolio-item');
+        newItems.forEach(item => observer.observe(item));
+        
+        // Hide the "View More" button
+        if (viewMoreBtn) {
+            viewMoreBtn.style.display = 'none';
+        }
+        
+        // Smooth scroll to the new items
+        hiddenItems.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+}
+
