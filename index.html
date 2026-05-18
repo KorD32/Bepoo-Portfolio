@@ -8,123 +8,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;500&family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <style>
-        /* Navigation Cards Grid */
-        .nav-cards-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 2rem 0;
-        }
-
-        .nav-card {
-            position: relative;
-            aspect-ratio: 16/10;
-            overflow: hidden;
-            background: var(--bg-secondary);
-            border: 2px solid var(--border);
-            cursor: pointer;    
-            transition: all 0.3s ease;
-            text-decoration: none;
-            clip-path: polygon(
-                8px 0, calc(100% - 8px) 0, 100% 8px,
-                100% calc(100% - 8px), calc(100% - 8px) 100%,
-                8px 100%, 0 calc(100% - 8px), 0 8px
-            );
-        }
-
-        .nav-card:hover {
-            border-color: var(--accent);
-            transform: translateY(-8px);
-            box-shadow: 
-                0 12px 0 -6px var(--bg-primary),
-                0 12px 0 -4px var(--accent);
-        }
-
-        .nav-card-image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-
-        .nav-card:hover .nav-card-image {
-            transform: scale(1.1);
-        }
-
-        .nav-card-overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(180deg, transparent 0%, rgba(12, 12, 12, 0.7) 70%, rgba(12, 12, 12, 0.95) 100%);
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            padding: 1.5rem;
-        }
-
-        .nav-card-title {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 2rem;
-            letter-spacing: 0.1em;
-            color: var(--accent);
-            margin-bottom: 0.5rem;
-            text-transform: uppercase;
-        }
-
-        .nav-card-subtitle {
-            font-size: 0.65rem;
-            font-family: 'Press Start 2P', monospace;
-            color: var(--text-secondary);
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-        }
-
-        .works-section {
-            padding: 6rem 3rem;
-        }
-
-        .works-header {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-
-        .works-header h2 {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 3.5rem;
-            letter-spacing: 0.1em;
-            margin-bottom: 1rem;
-        }
-
-        .works-header h2 .accent {
-            color: var(--accent);
-        }
-
-        .works-header p {
-            color: var(--text-secondary);
-            font-size: 1rem;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        @media (max-width: 1024px) {
-            .nav-cards-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 768px) {
-            .nav-cards-grid {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-
-            .works-header h2 {
-                font-size: 2.5rem;
-            }
-        }
-    </style>
 </head>
 <body>
     <div class="grid-bg"></div>
@@ -164,17 +47,16 @@
         </div>
     </section>
     <section id="featured-projects" class="featured-projects-section">
-        <div class="section-header fade-in">
-            <h2 class="section-title" style="margin-left: 6rem;">MY <span class="accent">WORKS</span></h2>
-            <p class="section-description" style="margin-right: 2rem;">A few highlighted and recent works</p>
+        <div class="section-header fade-in featured-projects-header">
+            <h2 class="section-title">MY <span class="accent">WORKS</span></h2>
+            <p class="section-description">Selected Marketplace, creator, and Minecraft projects.</p>
         </div>
         <div class="featured-projects-grid">
-            <!-- Project Example 1 -->
             <div class="featured-project-card fade-in">
                 <img src="assets/projects/mrbeast.jpg" alt="Mr.Beast Gaming Build Challenge" class="featured-project-thumb">
                 <div class="featured-project-info">
                     <h3>Mr.Beast Gaming Build Challenge</h3>
-                    <p>Part of The Winner Team Indonesia, in Mr.Beast Gaming Build Challenge</p>
+                    <p>Part of the winning Indonesian team in the MrBeast Gaming Build Challenge</p>
                     <a href="https://www.youtube.com/watch?v=qTMKHZelGAs" target="_blank" class="external-link" aria-label="View Project"></a>
                 </div>
             </div>
@@ -182,7 +64,7 @@
                 <img src="assets/projects/dragon_ball.jpg" alt="Dragon Ball Z" class="featured-project-thumb">
                 <div class="featured-project-info">
                     <h3>Dragon Ball Z</h3>
-                    <p>Creating Custom Particles for Dragon Ball Z</p>
+                    <p>Created custom particle effects for Dragon Ball Z</p>
                     <a href="https://www.minecraft.net/en-us/marketplace/pdp/cyclone/dragon-ball-z/4730409a-ba78-416b-9589-6d089218047c" target="_blank" class="external-link" aria-label="View Project"></a>
                 </div>
             </div>
@@ -190,7 +72,7 @@
                 <img src="assets/projects/magic_spells.jpg" alt="Magic Spells" class="featured-project-thumb">
                 <div class="featured-project-info">
                     <h3>Magic Spells</h3>
-                    <p>Creating Custom Particles for Magic Spells</p>
+                    <p>Created custom particle effects for Magic Spells</p>
                     <a href="https://www.minecraft.net/en-us/marketplace/pdp/cyclone/magic-spells/dd9821b7-e51e-4b5a-b0dd-9bb65dbb9ab6" target="_blank" class="external-link" aria-label="View Project"></a>
                 </div>
             </div>
@@ -208,7 +90,7 @@
 
                 <div class="featured-project-info">
                     <h3>MOBS PETS ADD-ON</h3>
-                    <p>Creating Custom Particles for the Mob Pets Add-On</p>
+                    <p>Created custom particle effects for the Mob Pets Add-On</p>
                     <a href="https://www.minecraft.net/en-us/marketplace/pdp/cyclone/mob-pets-add--on-1.0/995515ce-2492-4cd9-a2a7-639033ace57b" target="_blank" class="external-link" aria-label="View Project"></a>
                 </div>
             </div>
@@ -217,7 +99,7 @@
                 <img src="assets/projects/security_expansion.jpeg" alt="4KS Studios" class="featured-project-thumb">
                 <div class="featured-project-info">
                     <h3>SECURITY EXPANSION</h3>
-                    <p>Creating Building for Security Expansion</p>
+                    <p>Built Minecraft environments for Security Expansion</p>
                     <a href="https://www.bedrockexplorer.com/@4ks-studios/security-expansion" target="_blank" class="external-link" aria-label="View Project"></a>
                 </div>
             </div>
@@ -226,7 +108,7 @@
                 <img src="assets/projects/seasons.jpg" alt="Glorious Studios" class="featured-project-thumb">
                 <div class="featured-project-info">
                     <h3>SEASONS ADD-ON</h3>
-                    <p>Creating Custom Particles for the Seasons Add-On</p>
+                    <p>Created custom particle effects for the Seasons Add-On</p>
                     <a href="https://www.bedrockexplorer.com/@glorious-studios/seasons-add-on-biomes-animals-and-more" target="_blank" class="external-link" aria-label="View Project"></a>
                 </div>
             </div>
@@ -234,7 +116,7 @@
                 <img src="assets/projects/anime_jutsu.jpg" alt="Kubo Studios" class="featured-project-thumb">
                 <div class="featured-project-info">
                     <h3>ANIME JUTSU ADD-ON</h3>
-                    <p>Creating custom particles for the Anime Jutsu Add-On</p>
+                    <p>Created custom particle effects for the Anime Jutsu Add-On</p>
                     <a href="https://www.minecraft.net/en-us/marketplace/pdp/kubo-studios/anime-jutsu-add--on/143d25c4-773b-49e0-85d0-20090b11317f" target="_blank" class="external-link" aria-label="View Project"></a>
                 </div>
             </div>
@@ -242,12 +124,12 @@
                 <img src="assets/projects/deep_dark_spirits.jpg" alt="Dodo Studios" class="featured-project-thumb">
                 <div class="featured-project-info">
                     <h3>DEEP DARK SPIRITS SKINS</h3>
-                    <p>Creating custom skins for the Deep Dark Spirits</p>
+                    <p>Created custom skins for the Deep Dark Spirits</p>
                     <a href="https://www.bedrockexplorer.com/@dodo-studios/deep-dark-spirits" target="_blank" class="external-link" aria-label="View Project"></a>
                 </div>
             </div>
             <div class="featured-project-card fade-in">
-                <img src="assets/projects/deep_dark_spirits.jpg" alt="Dodo Studios" class="featured-project-thumb">
+                <img src="assets/projects/zombie_addon.jpg" alt="Builder Horizon" class="featured-project-thumb">
                 <div class="featured-project-info">
                     <h3>ZOMBIES ADDON</h3>
                     <p>3D Modeler of Zombies Addon</p>
@@ -255,15 +137,15 @@
                 </div>
             </div>
             <div class="featured-project-card fade-in">
-                <img src="assets/projects/deep_dark_spirits.jpg" alt="Dodo Studios" class="featured-project-thumb">
+                <img src="assets/projects/furniture_addon.jpg" alt="Mob Pie" class="featured-project-thumb">
                 <div class="featured-project-info">
                     <h3>FURNITURE ADDON</h3>
-                    <p>Create custom 3D Models for Furniture Addon</p>
+                    <p>Created custom 3D Models for Furniture Addon</p>
                     <a href="https://www.bedrockexplorer.com/@mob-pie/furniture-add-on" target="_blank" class="external-link" aria-label="View Project"></a>
                 </div>
             </div>
             <div class="featured-project-card fade-in">
-                <img src="assets/projects/deep_dark_spirits.jpg" alt="Dodo Studios" class="featured-project-thumb">
+                <img src="assets/projects/animals_addon.jpg" alt="Mob Pie" class="featured-project-thumb">
                 <div class="featured-project-info">
                     <h3>ANIMALS ADDON</h3>
                     <p>3D Modeler of Animals Addon</p>
@@ -271,7 +153,7 @@
                 </div>
             </div>
             <div class="featured-project-card fade-in">
-                <img src="assets/projects/deep_dark_spirits.jpg" alt="Dodo Studios" class="featured-project-thumb">
+                <img src="assets/projects/rpg_addon.jpg" alt="Kubo Studios" class="featured-project-thumb">
                 <div class="featured-project-info">
                     <h3>RPG ADDON</h3>
                     <p>Particle Artist of RPG Addon</p>
@@ -279,7 +161,7 @@
                 </div>
             </div>
             <div class="featured-project-card fade-in">
-                <img src="assets/projects/deep_dark_spirits.jpg" alt="Dodo Studios" class="featured-project-thumb">
+                <img src="assets/projects/villagers_addon.jpg" alt="Kubo Studios" class="featured-project-thumb">
                 <div class="featured-project-info">
                     <h3>VILLAGERS++ ADDON</h3>
                     <p>Particle Artist of Villagers++ Addon</p>
@@ -287,7 +169,7 @@
                 </div>
             </div>
             <div class="featured-project-card fade-in">
-                <img src="assets/projects/deep_dark_spirits.jpg" alt="Dodo Studios" class="featured-project-thumb">
+                <img src="assets/projects/400_furnitures.jpg" alt="Dodo Studios" class="featured-project-thumb">
                 <div class="featured-project-info">
                     <h3>400+ FURNITURE ADDON</h3>
                     <p>Pixel Artist for 400+ Furniture Addon</p>
@@ -295,94 +177,31 @@
                 </div>
             </div>
             <div class="featured-project-card fade-in">
-                <img src="assets/projects/deep_dark_spirits.jpg" alt="Dodo Studios" class="featured-project-thumb">
+                <img src="assets/projects/lasers_blasters.jpg" alt="4KS Studios" class="featured-project-thumb">
                 <div class="featured-project-info">
-                    <h3>100 ZONES PARKOUR</h3>
-                    <p>Builder of 100 Zones Parkour</p>
-                    <a href="https://www.bedrockexplorer.com/@melonbp/100-zones-parkour" target="_blank" class="external-link" aria-label="View Project"></a>
+                    <h3>LASERS BLASTERS</h3>
+                    <p>Builder of Lasers Blasters</p>
+                    <a href="https://www.bedrockexplorer.com/@4ks-studios/laser-blasters" target="_blank" class="external-link" aria-label="View Project"></a>
+                </div>
+            </div>
+            <div class="featured-project-card fade-in">
+                <img src="assets/projects/laser_eyes.jpg" alt="4KS Studios" class="featured-project-thumb">
+                <div class="featured-project-info">
+                    <h3>LASER EYES</h3>
+                    <p>Builder of Laser Eyes</p>
+                    <a href="https://www.bedrockexplorer.com/@4ks-studios/laser-eyes" target="_blank" class="external-link" aria-label="View Project"></a>
+                </div>
+            </div>
+            <div class="featured-project-card fade-in">
+                <img src="assets/projects/dark_mode.jpg" alt="Melon BP" class="featured-project-thumb">
+                <div class="featured-project-info">
+                    <h3>Dark Mode</h3>
+                    <p>Texture Artist of Dark Mode</p>
+                    <a href="https://www.minecraft.net/en-us/marketplace/pdp/melonbp/dark-mode/005a30aa-598d-4116-a5f8-f527b77ce567" target="_blank" class="external-link" aria-label="View Project"></a>
                 </div>
             </div>
         </div>
-        
-        <style>
-            .featured-projects-section {
-                padding: 4rem 0 2rem 0;
-                background: var(--bg-secondary);
-            }
-            .featured-projects-grid {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-                gap: 2rem;
-                max-width: 1300px;
-                margin: 0 auto;
-            }
-            .featured-project-card {
-                background: var(--bg-primary);
-                border-radius: 14px;
-                box-shadow: 0 2px 12px rgb(0 0 0 / 8%);
-                overflow: hidden;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                transition: transform 0.2s;
-            }
-            .featured-project-card:hover {
-                transform: translateY(-6px) scale(1.01);
-                box-shadow: 0 8px 28px rgb(0 0 0 / 14%);
-            }
-            .featured-project-thumb {
-                width: 100%;
-                height: 220px;
-                object-fit: cover;
-                background: #222;
-                display: block;
-            }
-            .featured-project-info {
-                padding: 1.3rem 1.2rem;
-                text-align: center;
-            }
-            .featured-project-info h3 {
-                margin: 0 0 .5em 0;
-                font-size: 1.23rem;
-                font-family: 'Bebas Neue', Arial, sans-serif;
-                letter-spacing: 1px;
-            }
-            .featured-project-info p {
-                color: var(--text-secondary);
-                font-size: .97rem;
-                margin-bottom: 1em;
-            }
-            .external-link {
-                display: inline-flex;
-                align-items: center;
-                justify-content: center;
-                width: 44px;
-                height: 44px;
-                background: var(--accent);
-                color: #fff;
-                border-radius: 50%;
-                text-decoration: none;
-                transition: all 0.22s;
-                position: relative;
-            }
-            .external-link::after {
-                content: '→';
-                font-size: 1.2rem;
-                font-weight: bold;
-            }
-            .external-link:hover {
-                background: #d4a617;
-                transform: scale(1.1) rotate(-45deg);
-            }
-            @media (max-width: 850px) {
-                .featured-projects-grid {
-                    grid-template-columns: 1fr;
-                }
-                .featured-project-thumb {
-                    height: 220px;
-                }
-            }
-        </style>
+    
     </section>
 
     <section id="works" class="works-section">
@@ -471,6 +290,20 @@
                 </div>
             </div>
         </div>
+        <div class="about-stats">
+    <div class="stat-card">
+        <span class="stat-number">6+</span>
+        <span class="stat-label">Years Experience</span>
+    </div>
+    <div class="stat-card">
+        <span class="stat-number">200+</span>
+        <span class="stat-label">Projects Completed</span>
+    </div>
+    <div class="stat-card">
+        <span class="stat-number">50+</span>
+        <span class="stat-label">Happy Clients</span>
+    </div>
+</div>
     </section>
 
     <section id="clients">
@@ -479,75 +312,64 @@
             <span class="section-number">03</span>
         </div>
         
-        <style>
-            .clients-content {
-                transition: transform 0.25s cubic-bezier(.32,2,.55,.27);
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-            .clients-content:hover {
-                transform: scale(1.08);
-                z-index: 2;
-            }
-        </style>
-        <div style="display: flex; flex-direction: column; align-items: center;">
-            <div class="clients-list" style="display: flex; flex-wrap: wrap; flex-direction: row; gap: 64px 90px; max-width: 1150px; justify-content: center; align-items: center;">
+        <div class="clients-wrapper">
+            <div class="clients-list">
                 <div class="clients-content">
                     <a href="https://www.youtube.com/channel/UCm99c6g9MKBL4lNTlWrjyFQ" target="_blank" rel="noopener">
-                        <img src="assets/clients/checkpoint.jpg" alt="Checkpoint" style="border-radius: 50%; width: 140px; height: 140px; object-fit: cover;">
+                        <img src="assets/clients/checkpoint.jpg" alt="Checkpoint">
                     </a>
                 </div>
                 <div class="clients-content">
                     <a href="https://www.cyclone.games" target="_blank" rel="noopener">
-                        <img src="assets/clients/cyclone.png" alt="CycloneMC" style="border-radius: 50%; width: 140px; height: 140px; object-fit: cover;">
+                        <img src="assets/clients/cyclone.png" alt="CycloneMC">
                     </a>
                 </div>
                 <div class="clients-content">
                     <a href="https://www.youtube.com/channel/UC0eLBYhxW9HC0P9PXQ73mpQ" target="_blank" rel="noopener">
-                        <img src="assets/clients/cash.jpg" alt="Client 3" style="border-radius: 50%; width: 140px; height: 140px; object-fit: cover;">
+                        <img src="assets/clients/cash.jpg" alt="Cash">
                     </a>
                 </div>
                 <div class="clients-content">
                     <a href="https://www.youtube.com/@nico" target="_blank" rel="noopener">
-                        <img src="assets/clients/nico.jpg" alt="Client 4" style="border-radius: 50%; width: 140px; height: 140px; object-fit: cover;">
+                        <img src="assets/clients/nico.jpg" alt="Nico">
                     </a>
                 </div>
                 <div class="clients-content">
                     <a href="https://www.youtube.com/channel/UCy85PyiVv9RpTGvh2m8bUhw" target="_blank" rel="noopener">
-                        <img src="assets/clients/kubo.jpg" alt="Client 5" style="border-radius: 50%; width: 140px; height: 140px; object-fit: cover;">
+                        <img src="assets/clients/kubo.jpg" alt="Kubo Studios">
                     </a>
                 </div>
-                
-                <div class="clients-list" style="display: flex; flex-wrap: wrap; flex-direction: row; gap: 64px 90px; max-width: 1150px; justify-content: center; align-items: center;">
                 <div class="clients-content">
                     <a href="https://upstairsmc.com" target="_blank" rel="noopener">
-                        <img src="assets/clients/upstairs.png" alt="Checkpoint" style="border-radius: 50%; width: 140px; height: 140px; object-fit: cover;">
+                        <img src="assets/clients/upstairs.png" alt="UpstairsMC">
                     </a>
                 </div>
                 <div class="clients-content">
                     <a href="https://www.4ksstudios.com" target="_blank" rel="noopener">
-                        <img src="assets/clients/4ks.png" alt="CycloneMC" style="border-radius: 50%; width: 140px; height: 140px; object-fit: cover;">
+                        <img src="assets/clients/4ks.png" alt="4KS Studios">
                     </a>
                 </div>
                 <div class="clients-content">
                     <a href="https://www.youtube.com/c/DodoStudios" target="_blank" rel="noopener">
-                        <img src="assets/clients/dodo.jpg" alt="Client 3" style="border-radius: 50%; width: 140px; height: 140px; object-fit: cover;">
+                        <img src="assets/clients/dodo.jpg" alt="Dodo Studios">
                     </a>
                 </div>
                 <div class="clients-content">
                     <a href="https://www.youtube.com/@Bionic" target="_blank" rel="noopener">
-                        <img src="assets/clients/bionic.jpg" alt="Client 4" style="border-radius: 50%; width: 140px; height: 140px; object-fit: cover;">
+                        <img src="assets/clients/bionic.jpg" alt="Bionic">
                     </a>
                 </div>
                 <div class="clients-content">
                     <a href="https://www.youtube.com/@JustAPepper" target="_blank" rel="noopener">
-                        <img src="assets/clients/pepper.jpg" alt="Client 5" style="border-radius: 50%; width: 140px; height: 140px; object-fit: cover;">
+                        <img src="assets/clients/pepper.jpg" alt="JustAPepper">
                     </a>
-                </div>            
+                </div>
             </div>
-        </div>
-        
+
+            <div class="clients-note">
+                <p>And much more!</p>
+            </div>
+        </div>        
     </section>
 
     <section id="contact">
@@ -555,7 +377,6 @@
             <h2 class="section-title">GET IN <span class="accent">TOUCH</span></h2>
             <span class="section-number">04</span>
         </div>
-        
         <div class="contact-content">
             <h3>LET'S <span class="accent">BUILD</span> TOGETHER</h3>
             <p>
@@ -577,10 +398,6 @@
                 <a href="https://www.instagram.com/bepoox/" target="_blank" class="contact-link">
                     <img src="assets/social/instagram.png" alt="Instagram" style="width: 22px; height: 22px; vertical-align: middle; margin-right: 8px;">
                     Instagram
-                </a>
-                <a href="https://www.patreon.com/bepoo" target="_blank" class="contact-link">
-                    <img src="assets/social/patreon.png" alt="Patreon" style="width: 22px; height: 22px; vertical-align: middle; margin-right: 8px;">
-                    Patreon
                 </a>
             </div>
         </div>
