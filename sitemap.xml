@@ -1,25 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Replace https://your-domain.com with your final production domain before submitting to Google Search Console. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://your-domain.com/</loc>
+        <loc>https://bepoo.netlify.app/</loc>
     </url>
     <url>
-        <loc>https://your-domain.com/models.html</loc>
+        <loc>https://bepoo.netlify.app/models.html</loc>
     </url>
     <url>
-        <loc>https://your-domain.com/leveldesign.html</loc>
+        <loc>https://bepoo.netlify.app/leveldesign.html</loc>
     </url>
     <url>
-        <loc>https://your-domain.com/vfx.html</loc>
+        <loc>https://bepoo.netlify.app/vfx.html</loc>
     </url>
     <url>
-        <loc>https://your-domain.com/animations.html</loc>
+        <loc>https://bepoo.netlify.app/animations.html</loc>
     </url>
     <url>
-        <loc>https://your-domain.com/skins.html</loc>
+        <loc>https://bepoo.netlify.app/skins.html</loc>
     </url>
     <url>
-        <loc>https://your-domain.com/persona.html</loc>
+        <loc>https://bepoo.netlify.app/persona.html</loc>
     </url>
 </urlset>

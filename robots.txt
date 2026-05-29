@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-# Add your final production domain when available.
-# Sitemap: https://your-domain.com/sitemap.xml
+Sitemap: https://bepoo.netlify.app/sitemap.xml
