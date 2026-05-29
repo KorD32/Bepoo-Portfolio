@@ -4,10 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Animations | Bepoo Portfolio</title>
+    <meta name="description" content="View Bepoo's animation showcase for Minecraft entities, items, mobs, rideables, and stylized asset motion.">
+    <meta name="keywords" content="Bepoo animation, Minecraft animation, Blockbench animation, animated Minecraft models, entity animation">
+    <meta name="author" content="Bepoo">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0c0c0c">
+    <meta property="og:title" content="Animations | Bepoo Portfolio">
+    <meta property="og:description" content="Minecraft entity, item, and asset animation showcase by Bepoo.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="/logo/bepoo.png">
+    <meta property="og:site_name" content="Bepoo Portfolio">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Animations | Bepoo Portfolio">
+    <meta name="twitter:description" content="Minecraft animation showcase by Bepoo.">
+    <meta name="twitter:image" content="/logo/bepoo.png">
+    <link rel="icon" type="image/png" href="/logo/bepoo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;500&family=Press+Start+2P&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=page-transition">
 </head>
 <body>
     <div class="grid-bg"></div>
@@ -22,17 +37,28 @@
         </ul>
     </nav>
 
-    <section id="animations" style="padding-top: 8rem;">
-        <div class="section-header">
-            <h2 class="section-title">ANIMATIONS <span class="accent">SHOWCASE</span></h2>
-            <span class="section-number">03</span>
+    <section id="animations" class="portfolio-page animations-page">
+        <div class="portfolio-hero fade-in">
+            <div class="portfolio-hero-copy">
+                <span class="portfolio-kicker">Motion, timing, and character feel</span>
+                <h1>ANIMATION <span class="accent">SHOWCASE</span></h1>
+                <p>Looping entity motion, combat reads, vehicle movement, and expressive animated assets.</p>
+            </div>
         </div>
-        <div class="portfolio-grid">
+
+        <div class="portfolio-toolbar fade-in">
+            <a href="models.html">Models</a>
+            <a href="leveldesign.html">Levels</a>
+            <a href="vfx.html">VFX</a>
+            <a href="animations.html" class="active">Animations</a>
+            <a href="skins.html">Skins</a>
+            <a href="persona.html">Persona</a>
+        </div>
+        <div class="portfolio-grid portfolio-collapsible is-collapsed">
             <!-- FEATURED ANIMATION -->
             <div class="portfolio-item featured fade-in" onclick="openLightbox(this)">
                 <span class="category-badge">ENTITY</span>
-                <video src="assets/animations/entity_animation.mp4" poster="assets/animations/entity_animation_thumb.png" muted loop playsinline></video>
-                <div class="play-icon"></div>
+                <img src="assets/3dmodel/end_knight.gif" alt="End Knight Animation">
                 <div class="overlay"></div>
                 <div class="info">
                     <h3>Entity Animation</h3>
@@ -43,8 +69,7 @@
             <!-- ANIMATION EXAMPLES -->
             <div class="portfolio-item fade-in" onclick="openLightbox(this)">
                 <span class="category-badge">ITEM</span>
-                <video src="assets/animations/item_spin.mp4" poster="assets/animations/item_spin_thumb.png" muted loop playsinline></video>
-                <div class="play-icon"></div>
+                <img src="assets/3dmodel/weapon_1.gif" alt="Magical Staff Animation">
                 <div class="overlay"></div>
                 <div class="info">
                     <h3>Item Spin</h3>
@@ -53,8 +78,8 @@
             </div>
 
             <div class="portfolio-item fade-in" onclick="openLightbox(this)">
-                <span class="category-badge">VFX</span>
-                <img src="assets/animations/vfx_swing.gif" alt="VFX Swing" style="width:100%; height:auto;">
+                <span class="category-badge">RIDEABLE</span>
+                <img src="assets/3dmodel/rideable_snail.gif" alt="Rideable Snail Animation">
                 <div class="overlay"></div>
                 <div class="info">
                     <h3>Sword Swing VFX</h3>
@@ -64,10 +89,15 @@
 
             <!-- ADD MORE ANIMATION ITEMS HERE -->
         </div>
+        <div class="portfolio-show-more-container">
+            <button class="portfolio-show-more" type="button" data-show-more-grid>
+                View More
+            </button>
+        </div>
     </section>
 
     <footer>
-        <span>© 2025 KorD. ALL RIGHTS RESERVED.</span>
+        <span>© 2025 Bepoo. ALL RIGHTS RESERVED.</span>
         <span class="minecraft-credit">◆ BUILT WITH PIXELS ◆</span>
     </footer>
 
@@ -77,8 +107,6 @@
         <div class="lightbox-content" id="lightbox-content"></div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=page-transition"></script>
 </body>
 </html>
-
-

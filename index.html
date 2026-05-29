@@ -4,10 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio | Bepoo • 3D Models • VFX • Level Design</title>
+    <meta name="description" content="Bepoo is a Minecraft 3D artist, animator, VFX artist, and level designer creating Blockbench models, marketplace assets, skins, particles, and immersive Minecraft builds.">
+    <meta name="keywords" content="Bepoo, Minecraft artist, Blockbench artist, Minecraft 3D models, Minecraft VFX, Minecraft level design, Minecraft skins, Minecraft marketplace portfolio">
+    <meta name="author" content="Bepoo">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0c0c0c">
+    <meta property="og:title" content="Bepoo Portfolio | Minecraft 3D Artist, VFX & Level Design">
+    <meta property="og:description" content="Explore Bepoo's Minecraft portfolio: 3D models, VFX, animations, skins, persona assets, and level design work.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="/logo/bepoo.png">
+    <meta property="og:site_name" content="Bepoo Portfolio">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Bepoo Portfolio | Minecraft 3D Artist">
+    <meta name="twitter:description" content="Minecraft 3D models, VFX, animations, skins, and level design by Bepoo.">
+    <meta name="twitter:image" content="/logo/bepoo.png">
+    <link rel="icon" type="image/png" href="/logo/bepoo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;500&family=Press+Start+2P&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=page-transition">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Bepoo",
+        "jobTitle": "Minecraft 3D Artist, Animator, VFX Artist, and Level Designer",
+        "description": "Minecraft portfolio featuring Blockbench 3D models, VFX, animations, skins, persona assets, and level design.",
+        "image": "/logo/bepoo.png",
+        "knowsAbout": [
+            "Minecraft 3D Models",
+            "Blockbench",
+            "Minecraft VFX",
+            "Minecraft Level Design",
+            "Minecraft Skins",
+            "Animation"
+        ],
+        "sameAs": [
+            "https://x.com/bepounyu",
+            "https://www.instagram.com/bepoox/"
+        ]
+    }
+    </script>
 </head>
 <body>
     <div class="grid-bg"></div>
@@ -25,7 +62,7 @@
     <section id="home" class="hero">
         <div class="hero-wrapper">
             <div class="hero-content">
-                <h1>
+                <h1 class="hero-heading">
                     <span class="highlight">3D Artist</span>
                     <span class="hero-amp">&amp;</span>
                     <span class="highlight">Animator</span>
@@ -35,10 +72,6 @@
                     stunning particle effects, and epic level designs. 
                     Bringing your blocky visions to life.
                 </p>
-                <div class="hero-actions">
-                    <a href="#featured-projects" class="hero-button primary">View Works</a>
-                    <a href="#contact" class="hero-button secondary">Hire Bepoo</a>
-                </div>
                 <div class="hero-tags">
                     <span class="tag">Blockbench</span>
                     <span class="tag">Aseprite</span>
@@ -50,16 +83,7 @@
             </div>
             <div class="hero-showcase" aria-label="Featured portfolio preview">
                 <div class="showcase-card showcase-main">
-                    <img src="assets/3dmodel/end_knight.gif" alt="End Knight 3D model">
-                    <span>Boss Model</span>
-                </div>
-                <div class="showcase-card showcase-side top">
-                    <img src="assets/projects/dragon_ball.jpg" alt="Dragon Ball Z particles project">
-                    <span>Marketplace VFX</span>
-                </div>
-                <div class="showcase-card showcase-side bottom">
-                    <img src="assets/leveldesign/iceverse.jpeg" alt="Iceverse level design">
-                    <span>World Design</span>
+                    <img src="assets/logo/bepoo.png" alt="Bepoo"> 
                 </div>
             </div>
         </div>
@@ -69,9 +93,9 @@
             <h2 class="section-title">MY <span class="accent">WORKS</span></h2>
             <p class="section-description">Selected Marketplace, creator, and Minecraft projects.</p>
         </div>
-        <div class="featured-projects-grid">
+        <div class="featured-projects-grid is-collapsed" id="featured-projects-grid">
             <div class="featured-project-card fade-in">
-                <img src="assets/projects/mrbeast.jpg" alt="Mr.Beast Gaming Build Challenge" class="featured-project-thumb">
+                <img src="assets/projects/mrbeast.jpg" alt="Mr.Beast Gaming Build Challenge" class="featured-project-thumb featured-project-thumb-full">
                 <div class="featured-project-info">
                     <h3>Mr.Beast Gaming Build Challenge</h3>
                     <p>Part of the winning Indonesian team in the MrBeast Gaming Build Challenge</p>
@@ -123,7 +147,7 @@
             </div>
             <!-- Add more projects as needed -->
             <div class="featured-project-card fade-in">
-                <img src="assets/projects/seasons.jpg" alt="Glorious Studios" class="featured-project-thumb">
+                <img src="assets/projects/seasons.jpg" alt="Glorious Studios" class="featured-project-thumb featured-project-thumb-full">
                 <div class="featured-project-info">
                     <h3>SEASONS ADD-ON</h3>
                     <p>Created custom particle effects for the Seasons Add-On</p>
@@ -131,7 +155,7 @@
                 </div>
             </div>
             <div class="featured-project-card fade-in">
-                <img src="assets/projects/anime_jutsu.jpg" alt="Kubo Studios" class="featured-project-thumb">
+                <img src="assets/projects/anime_jutsu.jpg" alt="Kubo Studios" class="featured-project-thumb featured-project-thumb-full">
                 <div class="featured-project-info">
                     <h3>ANIME JUTSU ADD-ON</h3>
                     <p>Created custom particle effects for the Anime Jutsu Add-On</p>
@@ -219,6 +243,11 @@
                 </div>
             </div>
         </div>
+        <div class="featured-projects-actions">
+            <button class="featured-show-more" type="button" id="featured-show-more" aria-controls="featured-projects-grid">
+                View More
+            </button>
+        </div>
     
     </section>
 
@@ -271,6 +300,15 @@
                 <div class="nav-card-overlay">
                     <h3 class="nav-card-title">Minecraft Skins</h3>
                     <p class="nav-card-subtitle">Marketplace • Collections • Custom</p>
+                </div>
+            </a>
+
+            <!-- Persona Card -->
+            <a href="persona.html" class="nav-card fade-in">
+                <img src="https://placehold.co/800x500/111511/f5c518?text=PERSONA+ASSETS" alt="Persona Assets" class="nav-card-image nav-card-image-full">
+                <div class="nav-card-overlay">
+                    <h3 class="nav-card-title">Persona</h3>
+                    <p class="nav-card-subtitle">Identity • Emotes • Profile</p>
                 </div>
             </a>
         </div>
@@ -331,61 +369,76 @@
         </div>
         
         <div class="clients-wrapper">
-            <div class="clients-list">
-                <div class="clients-content">
-                    <a href="https://www.youtube.com/channel/UCm99c6g9MKBL4lNTlWrjyFQ" target="_blank" rel="noopener">
-                        <img src="assets/clients/checkpoint.jpg" alt="Checkpoint">
-                    </a>
+            <div class="clients-marquee" aria-label="Client logos">
+                <div class="clients-track">
+                    <div class="clients-list">
+                        <div class="clients-content">
+                            <a href="https://www.youtube.com/channel/UCm99c6g9MKBL4lNTlWrjyFQ" target="_blank" rel="noopener">
+                                <img src="assets/clients/checkpoint.jpg" alt="Checkpoint">
+                            </a>
+                        </div>
+                        <div class="clients-content">
+                            <a href="https://www.cyclone.games" target="_blank" rel="noopener">
+                                <img src="assets/clients/cyclone.png" alt="CycloneMC">
+                            </a>
+                        </div>
+                        <div class="clients-content">
+                            <a href="https://www.youtube.com/channel/UC0eLBYhxW9HC0P9PXQ73mpQ" target="_blank" rel="noopener">
+                                <img src="assets/clients/cash.jpg" alt="Cash">
+                            </a>
+                        </div>
+                        <div class="clients-content">
+                            <a href="https://www.youtube.com/@nico" target="_blank" rel="noopener">
+                                <img src="assets/clients/nico.jpg" alt="Nico">
+                            </a>
+                        </div>
+                        <div class="clients-content">
+                            <a href="https://www.youtube.com/channel/UCy85PyiVv9RpTGvh2m8bUhw" target="_blank" rel="noopener">
+                                <img src="assets/clients/kubo.jpg" alt="Kubo Studios">
+                            </a>
+                        </div>
+                        <div class="clients-content">
+                            <a href="https://upstairsmc.com" target="_blank" rel="noopener">
+                                <img src="assets/clients/upstairs.png" alt="UpstairsMC">
+                            </a>
+                        </div>
+                        <div class="clients-content">
+                            <a href="https://www.4ksstudios.com" target="_blank" rel="noopener">
+                                <img src="assets/clients/4ks.png" alt="4KS Studios">
+                            </a>
+                        </div>
+                        <div class="clients-content">
+                            <a href="https://www.youtube.com/c/DodoStudios" target="_blank" rel="noopener">
+                                <img src="assets/clients/dodo.jpg" alt="Dodo Studios">
+                            </a>
+                        </div>
+                        <div class="clients-content">
+                            <a href="https://www.youtube.com/@Bionic" target="_blank" rel="noopener">
+                                <img src="assets/clients/bionic.jpg" alt="Bionic">
+                            </a>
+                        </div>
+                        <div class="clients-content">
+                            <a href="https://www.youtube.com/@JustAPepper" target="_blank" rel="noopener">
+                                <img src="assets/clients/pepper.jpg" alt="JustAPepper">
+                            </a>
+                        </div>
+                        <div class="clients-content">
+                            <a href="https://www.youtube.com/@MrBeastGaming" target="_blank" rel="noopener">
+                                <img src="assets/clients/mrbeast.jpg" alt="MrBeast Gaming">
+                            </a>
+                        </div>
+                        <div class="clients-content">
+                            <a href="https://www.youtube.com/@gara-mc" target="_blank" rel="noopener">
+                                <img src="assets/clients/gara.jpg" alt="Gara MC">
+                            </a>
+                        </div>
+                        <div class="clients-content">
+                            <a href="https://www.youtube.com/@merakistudiosmc" target="_blank" rel="noopener">
+                                <img src="assets/clients/meraki.jpg" alt="Meraki Studios">
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="clients-content">
-                    <a href="https://www.cyclone.games" target="_blank" rel="noopener">
-                        <img src="assets/clients/cyclone.png" alt="CycloneMC">
-                    </a>
-                </div>
-                <div class="clients-content">
-                    <a href="https://www.youtube.com/channel/UC0eLBYhxW9HC0P9PXQ73mpQ" target="_blank" rel="noopener">
-                        <img src="assets/clients/cash.jpg" alt="Cash">
-                    </a>
-                </div>
-                <div class="clients-content">
-                    <a href="https://www.youtube.com/@nico" target="_blank" rel="noopener">
-                        <img src="assets/clients/nico.jpg" alt="Nico">
-                    </a>
-                </div>
-                <div class="clients-content">
-                    <a href="https://www.youtube.com/channel/UCy85PyiVv9RpTGvh2m8bUhw" target="_blank" rel="noopener">
-                        <img src="assets/clients/kubo.jpg" alt="Kubo Studios">
-                    </a>
-                </div>
-                <div class="clients-content">
-                    <a href="https://upstairsmc.com" target="_blank" rel="noopener">
-                        <img src="assets/clients/upstairs.png" alt="UpstairsMC">
-                    </a>
-                </div>
-                <div class="clients-content">
-                    <a href="https://www.4ksstudios.com" target="_blank" rel="noopener">
-                        <img src="assets/clients/4ks.png" alt="4KS Studios">
-                    </a>
-                </div>
-                <div class="clients-content">
-                    <a href="https://www.youtube.com/c/DodoStudios" target="_blank" rel="noopener">
-                        <img src="assets/clients/dodo.jpg" alt="Dodo Studios">
-                    </a>
-                </div>
-                <div class="clients-content">
-                    <a href="https://www.youtube.com/@Bionic" target="_blank" rel="noopener">
-                        <img src="assets/clients/bionic.jpg" alt="Bionic">
-                    </a>
-                </div>
-                <div class="clients-content">
-                    <a href="https://www.youtube.com/@JustAPepper" target="_blank" rel="noopener">
-                        <img src="assets/clients/pepper.jpg" alt="JustAPepper">
-                    </a>
-                </div>
-            </div>
-
-            <div class="clients-note">
-                <p>And much more!</p>
             </div>
         </div>        
     </section>
@@ -397,9 +450,6 @@
         </div>
         <div class="contact-content">
             <h3>LET'S <span class="accent">BUILD</span> TOGETHER</h3>
-            <p>
-                Available for freelance projects, collaborations, and full-time opportunities. Feel free to reach out! 
-            </p>
             <div class="contact-links">
                 <a href="mailto:vinwijaya327@gmail.com" class="contact-link">
                     <img src="assets/social/email.png" alt="Email" style="width: 22px; height: 22px; vertical-align: middle; margin-right: 8px;">
@@ -426,6 +476,6 @@
         <span class="minecraft-credit">◆ BUILT WITH PIXELS ◆</span>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=page-transition"></script>
 </body>
 </html>

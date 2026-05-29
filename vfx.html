@@ -4,10 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VFX & Particles | Bepoo Portfolio</title>
+    <meta name="description" content="See Bepoo's Minecraft VFX and particle portfolio featuring spell effects, combat trails, auras, ambient particles, and Snowstorm-style concepts.">
+    <meta name="keywords" content="Bepoo VFX, Minecraft VFX, Minecraft particles, Snowstorm particles, Minecraft spell effects, Minecraft particle artist">
+    <meta name="author" content="Bepoo">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0c0c0c">
+    <meta property="og:title" content="VFX & Particles | Bepoo Portfolio">
+    <meta property="og:description" content="Minecraft particle effects, spell VFX, auras, trails, and Snowstorm-style work by Bepoo.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="/logo/bepoo.png">
+    <meta property="og:site_name" content="Bepoo Portfolio">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="VFX & Particles | Bepoo Portfolio">
+    <meta name="twitter:description" content="Minecraft VFX and particle showcase by Bepoo.">
+    <meta name="twitter:image" content="/logo/bepoo.png">
+    <link rel="icon" type="image/png" href="/logo/bepoo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;500&family=Press+Start+2P&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=page-transition">
 </head>
 <body>
     <div class="grid-bg"></div>
@@ -22,19 +37,30 @@
         </ul>
     </nav>
 
-    <section id="vfx" class="vfx-section" style="padding-top: 8rem;">
-        <div class="section-header">
-            <h2 class="section-title"><span class="accent">VFX</span> & PARTICLES</h2>
-            <span class="section-number">03</span>
+    <section id="vfx" class="portfolio-page vfx-section vfx-page">
+        <div class="portfolio-hero fade-in">
+            <div class="portfolio-hero-copy">
+                <span class="portfolio-kicker">Particles, magic, combat, and atmosphere</span>
+                <h1><span class="accent">VFX</span> SHOWCASE</h1>
+                <p>Particle Effect for spells, trails, impacts, auras, and environmental atmosphere.</p>
+            </div>
+        </div>
+
+        <div class="portfolio-toolbar fade-in">
+            <a href="models.html">Models</a>
+            <a href="leveldesign.html">Levels</a>
+            <a href="vfx.html" class="active">VFX</a>
+            <a href="animations.html">Animations</a>
+            <a href="skins.html">Skins</a>
+            <a href="persona.html">Persona</a>
         </div>
         
-        <div class="portfolio-grid">
+        <div class="portfolio-grid portfolio-collapsible is-collapsed">
             
             <!-- FEATURED VFX -->
             <div class="portfolio-item featured fade-in" onclick="openLightbox(this)">
                 <span class="category-badge">PARTICLES</span>
-                <video src="" poster="https://placehold.co/1200x600/1a1a1a/5dba3c?text=PARTICLE+EFFECTS" muted loop playsinline></video>
-                <div class="play-icon"></div>
+                <img src="assets/projects/dragon_ball.jpg" alt="Particle Effects">
                 <div class="overlay"></div>
                 <div class="info">
                     <h3>PARTICLE SYSTEM</h3>
@@ -45,8 +71,7 @@
             <!-- VFX VIDEO EXAMPLES -->
             <div class="portfolio-item fade-in" onclick="openLightbox(this)">
                 <span class="category-badge">SPELL</span>
-                <video src="" poster="https://placehold.co/800x500/1a1a1a/5dba3c?text=SPELL+VFX" muted loop playsinline></video>
-                <div class="play-icon"></div>
+                <img src="assets/projects/magic_spells.jpg" alt="Magic Spell VFX">
                 <div class="overlay"></div>
                 <div class="info">
                     <h3>MAGIC SPELL VFX</h3>
@@ -56,8 +81,7 @@
 
             <div class="portfolio-item fade-in" onclick="openLightbox(this)">
                 <span class="category-badge">EXPLOSION</span>
-                <video src="" poster="https://placehold.co/800x500/1a1a1a/5dba3c?text=EXPLOSION+VFX" muted loop playsinline></video>
-                <div class="play-icon"></div>
+                <img src="assets/projects/anime_jutsu.jpg" alt="Explosion Effect">
                 <div class="overlay"></div>
                 <div class="info">
                     <h3>EXPLOSION EFFECT</h3>
@@ -67,8 +91,7 @@
 
             <div class="portfolio-item fade-in" onclick="openLightbox(this)">
                 <span class="category-badge">AURA</span>
-                <video src="" poster="https://placehold.co/800x500/1a1a1a/5dba3c?text=AURA+VFX" muted loop playsinline></video>
-                <div class="play-icon"></div>
+                <img src="assets/projects/primal.jpg" alt="Character Aura">
                 <div class="overlay"></div>
                 <div class="info">
                     <h3>CHARACTER AURA</h3>
@@ -78,8 +101,7 @@
 
             <div class="portfolio-item fade-in" onclick="openLightbox(this)">
                 <span class="category-badge">TRAIL</span>
-                <video src="" poster="https://placehold.co/800x500/1a1a1a/5dba3c?text=TRAIL+VFX" muted loop playsinline></video>
-                <div class="play-icon"></div>
+                <img src="assets/projects/laser_eyes.jpg" alt="Weapon Trail">
                 <div class="overlay"></div>
                 <div class="info">
                     <h3>WEAPON TRAIL</h3>
@@ -89,8 +111,7 @@
 
             <div class="portfolio-item fade-in" onclick="openLightbox(this)">
                 <span class="category-badge">AMBIENT</span>
-                <video src="" poster="https://placehold.co/800x500/1a1a1a/5dba3c?text=AMBIENT+VFX" muted loop playsinline></video>
-                <div class="play-icon"></div>
+                <img src="assets/projects/seasons.jpg" alt="Ambient Particles">
                 <div class="overlay"></div>
                 <div class="info">
                     <h3>AMBIENT PARTICLES</h3>
@@ -101,10 +122,15 @@
             <!-- ADD MORE VFX VIDEO ITEMS HERE -->
 
         </div>
+        <div class="portfolio-show-more-container">
+            <button class="portfolio-show-more" type="button" data-show-more-grid>
+                View More
+            </button>
+        </div>
     </section>
 
     <footer>
-        <span>© 2025 KorD. ALL RIGHTS RESERVED.</span>
+        <span>© 2025 Bepoo. ALL RIGHTS RESERVED.</span>
         <span class="minecraft-credit">◆ BUILT WITH PIXELS ◆</span>
     </footer>
 
@@ -114,8 +140,6 @@
         <div class="lightbox-content" id="lightbox-content"></div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=page-transition"></script>
 </body>
 </html>
-
-

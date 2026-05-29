@@ -4,10 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Level Design | Bepoo Portfolio</title>
+    <meta name="description" content="Explore Bepoo's Minecraft level design portfolio with spawn hubs, interiors, marketplace worlds, custom terrain, and immersive Minecraft builds.">
+    <meta name="keywords" content="Bepoo level design, Minecraft builds, Minecraft spawn, Minecraft hub, Minecraft marketplace builds, Minecraft interior design">
+    <meta name="author" content="Bepoo">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0c0c0c">
+    <meta property="og:title" content="Level Design | Bepoo Portfolio">
+    <meta property="og:description" content="Minecraft builds, hubs, interiors, marketplace worlds, and level design work by Bepoo.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="/logo/bepoo.png">
+    <meta property="og:site_name" content="Bepoo Portfolio">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Level Design | Bepoo Portfolio">
+    <meta name="twitter:description" content="Minecraft level design and build showcase by Bepoo.">
+    <meta name="twitter:image" content="/logo/bepoo.png">
+    <link rel="icon" type="image/png" href="/logo/bepoo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;500&family=Press+Start+2P&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=page-transition">
 </head>
 <body>
     <div class="grid-bg"></div>
@@ -22,13 +37,25 @@
         </ul>
     </nav>
 
-    <section id="levels" style="padding-top: 8rem;">
-        <div class="section-header">
-            <h2 class="section-title">LEVEL <span class="accent">DESIGN</span></h2>
-            <span class="section-number">02</span>
+    <section id="levels" class="portfolio-page levels-page">
+        <div class="portfolio-hero fade-in">
+            <div class="portfolio-hero-copy">
+                <span class="portfolio-kicker">Playable spaces and cinematic worlds</span>
+                <h1>LEVEL <span class="accent">DESIGN</span></h1>
+                <p>Spawn hubs, interiors, gameplay environments, terrain, and set pieces with strong silhouette and mood.</p>
+            </div>
+        </div>
+
+        <div class="portfolio-toolbar fade-in">
+            <a href="models.html">Models</a>
+            <a href="leveldesign.html" class="active">Levels</a>
+            <a href="vfx.html">VFX</a>
+            <a href="animations.html">Animations</a>
+            <a href="skins.html">Skins</a>
+            <a href="persona.html">Persona</a>
         </div>
         
-        <div class="portfolio-grid">
+        <div class="portfolio-grid portfolio-collapsible is-collapsed">
             
             <!-- FEATURED BUILD -->
             <div class="portfolio-item featured fade-in" onclick="openLightbox(this)">
@@ -193,10 +220,15 @@
             <!-- ADD MORE LEVEL DESIGN ITEMS HERE -->
 
         </div>
+        <div class="portfolio-show-more-container">
+            <button class="portfolio-show-more" type="button" data-show-more-grid>
+                View More
+            </button>
+        </div>
     </section>
 
     <footer>
-        <span>© 2025 KorD. ALL RIGHTS RESERVED.</span>
+        <span>© 2025 Bepoo. ALL RIGHTS RESERVED.</span>
         <span class="minecraft-credit">◆ BUILT WITH PIXELS ◆</span>
     </footer>
 
@@ -206,8 +238,6 @@
         <div class="lightbox-content" id="lightbox-content"></div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=page-transition"></script>
 </body>
 </html>
-
-

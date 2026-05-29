@@ -83,16 +83,146 @@ function createPixels() {
 
 // Initialize observers when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
+    initPageTransitions();
+
     // Observe all fade-in elements
     const fadeElements = document.querySelectorAll(
         '.fade-in, .fade-in-left, .fade-in-right, .fade-in-scale, ' +
         '.section-header, .about-text, .skills-section, .skills-list, ' +
-        '.contact-content, .contact-links, footer'
+        '.contact-content, .contact-links, .portfolio-hero, .portfolio-toolbar, ' +
+        '.portfolio-show-more-container, footer'
     );
     fadeElements.forEach(el => observer.observe(el));
     
+    initFeaturedProjectsShowMore();
+    initPortfolioShowMore();
+    initClientsMarquee();
     createPixels();
 });
+
+function initPageTransitions() {
+    document.body.classList.add('page-ready');
+
+    requestAnimationFrame(() => {
+        document.body.classList.add('page-visible');
+    });
+
+    document.querySelectorAll('a[href]').forEach(link => {
+        link.addEventListener('click', event => {
+            const href = link.getAttribute('href');
+            const url = new URL(link.href, window.location.href);
+            const isModifiedClick = event.metaKey || event.ctrlKey || event.shiftKey || event.altKey;
+            const isSamePageHash = url.pathname === window.location.pathname && url.hash;
+
+            if (
+                isModifiedClick ||
+                link.target === '_blank' ||
+                link.hasAttribute('download') ||
+                !href ||
+                href.startsWith('#') ||
+                href.startsWith('mailto:') ||
+                href.startsWith('tel:') ||
+                url.origin !== window.location.origin ||
+                isSamePageHash
+            ) {
+                return;
+            }
+
+            event.preventDefault();
+            document.body.classList.add('page-leaving');
+
+            window.setTimeout(() => {
+                window.location.href = url.href;
+            }, 220);
+        });
+    });
+}
+
+function initClientsMarquee() {
+    const track = document.querySelector('#clients .clients-track');
+    const primaryList = track?.querySelector('.clients-list:not([aria-hidden="true"])');
+
+    if (!track || !primaryList) return;
+
+    track.querySelectorAll('.clients-list[aria-hidden="true"]').forEach(list => list.remove());
+
+    const duplicateList = primaryList.cloneNode(true);
+    duplicateList.setAttribute('aria-hidden', 'true');
+
+    duplicateList.querySelectorAll('a').forEach(link => {
+        link.setAttribute('tabindex', '-1');
+    });
+
+    duplicateList.querySelectorAll('img').forEach(image => {
+        image.setAttribute('alt', '');
+    });
+
+    track.appendChild(duplicateList);
+}
+
+function initFeaturedProjectsShowMore() {
+    const featuredGrid = document.getElementById('featured-projects-grid');
+    const showMoreButton = document.getElementById('featured-show-more');
+
+    if (!featuredGrid || !showMoreButton) return;
+
+    showMoreButton.addEventListener('click', () => {
+        featuredGrid.classList.remove('is-collapsed');
+
+        const revealedCards = featuredGrid.querySelectorAll('.featured-project-card:nth-child(n+4)');
+        revealedCards.forEach(card => {
+            observer.observe(card);
+            card.classList.add('visible');
+        });
+
+        showMoreButton.hidden = true;
+    });
+}
+
+function initPortfolioShowMore() {
+    const portfolioGrids = document.querySelectorAll('.portfolio-page .portfolio-grid.portfolio-collapsible');
+
+    portfolioGrids.forEach(grid => {
+        const showMoreButton = grid.nextElementSibling?.querySelector('[data-show-more-grid]');
+        if (!showMoreButton) return;
+
+        const updateButtonState = () => {
+            if (!grid.classList.contains('is-collapsed')) {
+                showMoreButton.hidden = true;
+                return;
+            }
+
+            const hiddenCards = Array.from(grid.querySelectorAll(':scope > .portfolio-item'))
+                .filter(card => getComputedStyle(card).display === 'none');
+
+            showMoreButton.hidden = hiddenCards.length === 0;
+        };
+
+        showMoreButton.addEventListener('click', () => {
+            grid.classList.remove('is-collapsed');
+
+            const revealedCards = grid.querySelectorAll(':scope > .portfolio-item');
+            revealedCards.forEach(card => {
+                observer.observe(card);
+                card.classList.add('visible');
+            });
+
+            const hiddenItems = document.getElementById('hidden-items');
+            if (hiddenItems && grid.closest('#models')) {
+                hiddenItems.classList.add('show');
+                hiddenItems.querySelectorAll('.portfolio-item').forEach(item => {
+                    observer.observe(item);
+                    item.classList.add('visible');
+                });
+            }
+
+            showMoreButton.hidden = true;
+        });
+
+        updateButtonState();
+        window.addEventListener('resize', updateButtonState);
+    });
+}
 
 
 // Smooth scroll for navigation links
@@ -151,4 +281,3 @@ function loadMoreItems() {
         hiddenItems.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 }
-
